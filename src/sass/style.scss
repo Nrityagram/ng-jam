@@ -19,7 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000;
-  font-size: 22px;
+  font-size: var(--mobile-body-fontsize);
   position: relative;
   // overflow: hidden;
 }
@@ -43,7 +43,7 @@ img {
 // Desktop + Tablet
 @media only screen and (min-width: 800px) {
   body {
-    font-size: 20px;
+    font-size: var(--desktop-body-fontsize);
   }
 }
 
@@ -56,9 +56,15 @@ img {
 @import "content";
 @import "footer";
 @import "home";
-@import "video-wrapper";
+// @import "video-wrapper";
 @import "owl-carousel-custom";
 @import "cta";
 @import "red-glass-button";
 @import "hover-card";
 @import "flip-card";
+@import "shoutout-box";
+@import "layouts";
+@import "flickity-carousels";
+@import "card";
+@import "buttons";
+@import "sm-wrappers";

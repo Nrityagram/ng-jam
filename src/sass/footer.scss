@@ -3,14 +3,14 @@ footer {
   min-height: -moz-fit-content;
   min-height: -webkit-fit-content;
   background-color: var(--primary-color);
-  color: var(--body-text-color);
+  color: var(--white-text-color);
   text-align: center;
   padding-bottom: 0.5em;
   font-family: "Lato", sans-serif;
 
   a {
     text-decoration: none;
-    color: var(--body-text-color);
+    color: var(--white-text-color);
     font-size: 0.85em;
   }
 
@@ -24,7 +24,7 @@ footer {
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    border-bottom: 1px solid var(--body-text-color);
+    border-bottom: 1px solid var(--white-text-color);
   }
   .address {
     font-size: 0.85em;

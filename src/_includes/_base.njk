@@ -1,49 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>{{ title }}</title>
-    <link rel="preconnect" href="https://res.cloudinary.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://res.cloudinary.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
     {% if carousels %}
-    <link
-      rel="stylesheet"
-      href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}"
-    />
+      <!-- <link rel="stylesheet" href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}"/> -->
+      <!-- <link rel="stylesheet" href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}"/> -->
+      <link rel="stylesheet" href="{{ '/utils/flickity.min.css' | url }}"/>
     {% endif %}
-    <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
   </head>
   <body>
     <!-- TODO Have the full menu structure as a JSON file -->
-    <div
-      style="display: none"
-      data-page-type="{{ pageType }}"
-      id="page-type"
-    ></div>
+    <div style="display: none" data-page-type="{{ pageType }}" id="page-type"></div>
     <nav>
       <div class="mobile">
-        <input type="checkbox" id="menu" />
+        <input type="checkbox" id="menu"/>
         <div class="navbar">
-          <a href="/"
-            ><img src="{{ '/img/logo.svg' | url }}" alt="" class="logo"
-          /></a>
+          <a href="/"><img src="{{ '/img/logo.svg' | url }}" alt="" class="logo"/></a>
           <label for="menu" id="ham-icon-wrapper">
             <div id="ham-icon"></div>
           </label>
         </div>
         <div class="multi-level" id="ml1">
           <div class="item">
-            <input type="checkbox" id="ml1-A" />
+            <input type="checkbox" id="ml1-A"/>
             <div class="label-plus">
               <a href="/about/">About</a>
               <label for="ml1-A">
@@ -51,55 +37,39 @@
               </label>
             </div>
             <ul>
-              <a href="/vision"><li>Vision</li></a>
-              <a href="/history"><li>History</li></a>
-              <a href="/space"><li>Space</li></a>
-              <!-- <li>
-                <div class="sub-item">
-                  <ul>
-                    <a href="/space/#temple"  {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Temple</li></a
-                    >
-                    <a href="/space/#yoga" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Yoga Centre</li></a
-                    >
-                    <a href="/space/#odissi" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Odissi Gurukul</li></a
-                    >
-                    <a href="/space/#dining" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Dining Hall</li></a
-                    >
-                    <a href="/space/#cottages" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Cottages</li></a
-                    >
-                    <a href="/space/#kula" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Kula</li></a
-                    >
-                    <a href="/space/#amphitheatre" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Amphitheatre</li></a
-                    >
-                  </ul>
-                </div>
-              </li> -->
-              <a href="/future"><li>Future</li></a>
+              <a href="/vision">
+                <li>Vision</li>
+              </a>
+              <a href="/history">
+                <li>History</li>
+              </a>
+              <a href="/space">
+                <li>Space</li>
+              </a>
+              <!-- <li> <div class="sub-item"> <ul> <a href="/space/#temple" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Temple</li></a > <a href="/space/#yoga" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Yoga Centre</li></a > <a href="/space/#odissi" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Odissi Gurukul</li></a > <a href="/space/#dining" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Dining Hall</li></a > <a href="/space/#cottages" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Cottages</li></a > <a href="/space/#kula" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Kula</li></a > <a href="/space/#amphitheatre" {% if '/space' in page.url %} onclick="_close_menu();" {% endif %} ><li>Amphitheatre</li></a > </ul> </div> </li> -->
+              <a href="/future">
+                <li>Future</li>
+              </a>
               <li>
                 <div class="sub-item">
                   <ul>
-                    <a href="/future/#arts-centre" {% if '/future' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Performing Arts Centre</li></a
-                    >
-                    <a href="/future/#resource-centre" {% if '/future' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Nrityagyān Resource Centre</li></a
-                    >
+                    <a href="/future/#arts-centre" {% if '/future' in page.url %} onclick="_close_menu();" {% endif %}>
+                      <li>Performing Arts Centre</li>
+                    </a >
+                    <a href="/future/#resource-centre" {% if '/future' in page.url %} onclick="_close_menu();" {% endif %}>
+                      <li>Nrityagyān Resource Centre</li>
+                    </a >
                   </ul>
                 </div>
               </li>
-              <a href="/board"><li>Board of Trustees</li></a>
+              <a href="/board">
+                <li>Board of Trustees</li>
+              </a>
             </ul>
           </div>
 
           <div class="item">
-            <input type="checkbox" id="ml1-B" />
+            <input type="checkbox" id="ml1-B"/>
             <div class="label-plus">
               <a href="/visit/">Visit</a>
               <label for="ml1-B">
@@ -107,18 +77,20 @@
               </label>
             </div>
             <ul>
-              <a href="/thingstodo"><li>Things to do</li></a>
-              <a href="/findyourway"><li>Find your Way</li></a>
-              <a
-                href="https://www.google.co.in/maps/@13.1615025,77.4593968,3a,60y,90t/data=!3m6!1e1!3m4!1s-9UefyZY73ob-pFS-YGTlA!2e0!7i13312!8i6656"
-                target="_blank"
-                ><li>Virtual Tour</li></a
-              >
+              <a href="/thingstodo">
+                <li>Things to do</li>
+              </a>
+              <a href="/findyourway">
+                <li>Find your Way</li>
+              </a>
+              <a href="https://www.google.co.in/maps/@13.1615025,77.4593968,3a,60y,90t/data=!3m6!1e1!3m4!1s-9UefyZY73ob-pFS-YGTlA!2e0!7i13312!8i6656" target="_blank">
+                <li>Virtual Tour</li>
+              </a >
             </ul>
           </div>
 
           <div class="item">
-            <input type="checkbox" id="ml1-C" />
+            <input type="checkbox" id="ml1-C"/>
             <div class="label-plus">
               <a href="/support/">Support</a>
               <label for="ml1-C">
@@ -126,19 +98,33 @@
               </label>
             </div>
             <ul>
-              <a href="/vardan"><li>Join Vardān</li></a>
+              <a href="/vardan">
+                <li>Join Vardān</li>
+              </a>
               <li>
                 <div class="sub-item">
                   <ul>
-                    <a href="/friendsofng/"><li>Friends of Nrityagram</li></a>
-                    <a href="/ngangels/"><li>Nrityagram &nbsp;Angels</li></a>
+                    <a href="/friendsofng/">
+                      <li>Friends of Nrityagram</li>
+                    </a>
+                    <a href="/ngangels/">
+                      <li>Nrityagram &nbsp;Angels</li>
+                    </a>
                   </ul>
                 </div>
               </li>
-              <a href="/donate/"><li>Donate</li></a>
-              <a href="/corpusfund/"><li>Support the Corpus Fund</li></a>
-              <a href="/otherwaystogive/"><li>Other ways to Give</li></a>
-              <a href="/sponsorship/"><li>Sponsorship</li></a>
+              <a href="/donate/">
+                <li>Donate</li>
+              </a>
+              <a href="/corpusfund/">
+                <li>Support the Corpus Fund</li>
+              </a>
+              <a href="/otherwaystogive/">
+                <li>Other ways to Give</li>
+              </a>
+              <a href="/sponsorship/">
+                <li>Sponsorship</li>
+              </a>
             </ul>
           </div>
 
@@ -149,21 +135,28 @@
           </div>
 
           <div class="item">
-            <input type="checkbox" id="ml1-D" />
-            <label for="ml1-D"
-              >Media<i class="fas fa-chevron-right"></i>
+            <input type="checkbox" id="ml1-D"/>
+            <label for="ml1-D">Media<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
-              <a href="/showtime"><li>Showtime</li></a>
-              <a href="/behindthescenes"><li>Behind the Scenes</li></a>
-              <a href="/lifeatng"><li>Life at Nrityagram</li></a>
-              <a href="/downtime"><li>Downtime</li></a>
+              <a href="/showtime">
+                <li>Showtime</li>
+              </a>
+              <a href="/behindthescenes">
+                <li>Behind the Scenes</li>
+              </a>
+              <a href="/lifeatng">
+                <li>Life at Nrityagram</li>
+              </a>
+              <a href="/downtime">
+                <li>Downtime</li>
+              </a>
             </ul>
           </div>
         </div>
         <div class="multi-level" id="ml2">
           <div class="item">
-            <input type="checkbox" id="ml2-A" />
+            <input type="checkbox" id="ml2-A"/>
             <div class="label-plus">
               <a href="/ensemble/">Ensemble</a>
               <label for="ml2-A">
@@ -171,49 +164,18 @@
               </label>
             </div>
             <ul>
-              <a href="/repertoire"><li>Repertoire</li></a>
-              <!-- <li>
-                <div class="sub-item">
-                  <ul>
-                    <a href="/repertoire/#sri"  {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Śrī: In Search of the Goddess</li></a
-                    >
-                    <a href="/repertoire/#ansh" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Ansh</li></a
-                    >
-                    <a href="/repertoire/#sspace" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Sacred Space</li></a
-                    >
-                    <a href="/repertoire/#pratima" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Pratimā: Reflection</li></a
-                    >
-                    <a href="/repertoire/#sriyah" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Śriyaḥ</li></a
-                    >
-                    <a href="/repertoire/#samhara" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Saṃhāra</li></a
-                    >
-                    <a href="/repertoire/#samyoga" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Saṃyoga</li></a
-                    >
-                    <a href="/repertoire/#lovelong" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Songs of Love and Longing</li></a
-                    >
-                    <a href="/repertoire/#yadu" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Yadunandana</li></a
-                    >
-                    <a href="/repertoire/#ahuti" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Āhuti</li></a
-                    >
-                  </ul>
-                </div>
-              </li> -->
-              <a href="/performancemap"><li>Performances</li></a>
+              <a href="/repertoire">
+                <li>Repertoire</li>
+              </a>
+              <!-- <li> <div class="sub-item"> <ul> <a href="/repertoire/#sri" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Śrī: In Search of the Goddess</li></a > <a href="/repertoire/#ansh" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Ansh</li></a > <a href="/repertoire/#sspace" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Sacred Space</li></a > <a href="/repertoire/#pratima" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Pratimā: Reflection</li></a > <a href="/repertoire/#sriyah" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Śriyaḥ</li></a > <a href="/repertoire/#samhara" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Saṃhāra</li></a > <a href="/repertoire/#samyoga" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Saṃyoga</li></a > <a href="/repertoire/#lovelong" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Songs of Love and Longing</li></a > <a href="/repertoire/#yadu" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Yadunandana</li></a > <a href="/repertoire/#ahuti" {% if '/repertoire' in page.url %} onclick="_close_menu();" {% endif %} ><li>Āhuti</li></a > </ul> </div> </li> -->
+              <a href="/performancemap">
+                <li>Performances</li>
+              </a>
             </ul>
           </div>
 
           <div class="item">
-            <input type="checkbox" id="ml2-B" />
+            <input type="checkbox" id="ml2-B"/>
             <div class="label-plus">
               <a href="/gurukula/">School</a>
               <label for="ml2-B">
@@ -221,15 +183,21 @@
               </label>
             </div>
             <ul>
-              <a href="/danceprof/"><li>Dance Professionals</li></a>
-              <a href="/danceunlimited"><li>Dance Unlimited</li></a>
+              <a href="/danceprof/">
+                <li>Dance Professionals</li>
+              </a>
+              <a href="/danceunlimited">
+                <li>Dance Unlimited</li>
+              </a>
               <li>
                 <div class="sub-item">
                   <ul>
-                    <a href="/danceunlimited/#residential" {% if '/danceunlimited' in page.url %} onclick="_close_menu();" {% endif %} ><li>Residential Workshops</li></a
-                    >
-                    <a href="/danceunlimited/#parttime" {% if '/danceunlimited' in page.url %} onclick="_close_menu();" {% endif %} ><li>Non-Residential Training</li></a
-                    >
+                    <a href="/danceunlimited/#residential" {% if '/danceunlimited' in page.url %} onclick="_close_menu();" {% endif %}>
+                      <li>Residential Workshops</li>
+                    </a >
+                    <a href="/danceunlimited/#parttime" {% if '/danceunlimited' in page.url %} onclick="_close_menu();" {% endif %}>
+                      <li>Non-Residential Training</li>
+                    </a >
                   </ul>
                 </div>
               </li>
@@ -237,7 +205,7 @@
           </div>
 
           <div class="item">
-            <input type="checkbox" id="ml2-C" />
+            <input type="checkbox" id="ml2-C"/>
             <div class="label-plus">
               <a href="/community/">Community</a>
               <label for="ml2-C">
@@ -245,19 +213,27 @@
               </label>
             </div>
             <ul>
-              <a href="/danceaware/"><li>Dance Awareness</li></a>
-              <a href="/villageoutreach"><li>Village Outreach</li></a>
-              <a href="/supportingartists"><li>Supporting Artists</li></a>
-              <a href="/popularisingarts"><li>Popularising the Arts</li></a>
+              <a href="/danceaware/">
+                <li>Dance Awareness</li>
+              </a>
+              <a href="/villageoutreach">
+                <li>Village Outreach</li>
+              </a>
+              <a href="/supportingartists">
+                <li>Supporting Artists</li>
+              </a>
+              <a href="/popularisingarts">
+                <li>Popularising the Arts</li>
+              </a>
               <li>
                 <div class="sub-item">
                   <ul>
-                    <a href="/popularisingarts/#vasant" {% if '/popularisingarts' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Vasantahabba</li></a
-                    >
-                    <a href="/popularisingarts/#ajji" {% if '/popularisingarts' in page.url %} onclick="_close_menu();" {% endif %}
-                      ><li>Ajji Kathegaḷu</li></a
-                    >
+                    <a href="/popularisingarts/#vasant" {% if '/popularisingarts' in page.url %} onclick="_close_menu();" {% endif %}>
+                      <li>Vasantahabba</li>
+                    </a >
+                    <a href="/popularisingarts/#ajji" {% if '/popularisingarts' in page.url %} onclick="_close_menu();" {% endif %}>
+                      <li>Ajji Kathegaḷu</li>
+                    </a >
                   </ul>
                 </div>
               </li>
@@ -266,35 +242,41 @@
 
           <div class="item">
             <div class="label-plus">
-              <a href="/rasa/">Rasā</a>
+              <a href="/rasa/">Rasa</a>
             </div>
           </div>
 
           <div class="item">
-            <input type="checkbox" id="ml2-D" />
-            <label for="ml2-D"
-              >People<i class="fas fa-chevron-right"></i>
+            <input type="checkbox" id="ml2-D"/>
+            <label for="ml2-D">People<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
-              <a href="/protima"><li>Protima Gauri</li></a>
-              <a href="/surupa"><li>Surupa Sen</li></a>
-              <a href="/pavithra"><li>Pavithra Reddy</li></a>
-              <a href="/lynne"><li>Lynne Fernandez</li></a>
+              <a href="/protima">
+                <li>Protima Gauri</li>
+              </a>
+              <a href="/surupa">
+                <li>Surupa Sen</li>
+              </a>
+              <a href="/pavithra">
+                <li>Pavithra Reddy</li>
+              </a>
+              <a href="/lynne">
+                <li>Lynne Fernandez</li>
+              </a>
             </ul>
           </div>
         </div>
         <div class="button-bars">
           <div class="button-bar">
-            <div class="button block">
-              <a href="mailto:info@nrityagram.org"
-                ><i class="far fa-envelope"></i> &nbsp; info@nrityagram.org</a
-              >
+            <div class="block button">
+              <a href="mailto:info@nrityagram.org">
+                <i class="far fa-envelope"></i>
+                &nbsp; info@nrityagram.org</a >
             </div>
-            <div class="button block">
-              <a href="tel:+918028466312"
-                ><i class="fas fa-phone-alt"></i> &nbsp; +91 80 28466312 / 3 /
-                4</a
-              >
+            <div class="block button">
+              <a href="tel:+918028466312">
+                <i class="fas fa-phone-alt"></i>
+                &nbsp; +91 80 28466312 / 3 / 4</a >
             </div>
           </div>
           <div class="button-bar">
@@ -313,19 +295,13 @@
                 <i class="fab fa-youtube"></i>
               </a>
             </div>
-            <!-- <div class="button round">
-              <a href="https://spatial.chat/s/nrityagram" target="_blank">
-                <i class="far fa-comments"></i>
-              </a>
-            </div> -->
+            <!-- <div class="button round"> <a href="https://spatial.chat/s/nrityagram" target="_blank"> <i class="far fa-comments"></i> </a> </div> -->
           </div>
         </div>
       </div>
       <div class="desk">
         <div class="navbar">
-          <a href="/"
-            ><img src="{{ '/img/logo.svg' | url }}" alt="" class="logo"
-          /></a>
+          <a href="/"><img src="{{ '/img/logo.svg' | url }}" alt="" class="logo"/></a>
           <div class="menu-groups">
             <div class="multi-level" id="ml1">
               <div class="item">
@@ -369,14 +345,12 @@
                             </li>
                           </ul>
                         </div>
-                    </div>
+                      </div>
                     </li>
                     <li>
                       <div class="sub-item">
                         <div class="item-name">
-                          <a href="/future"
-                            >Future</a
-                          >
+                          <a href="/future">Future</a >
                           <ul>
                             <li>
                               <a href="/future/#arts-centre">Performing Arts Centre</a>
@@ -385,8 +359,8 @@
                               <a href="/future/#resource-centre">Nrityagyān Resource Centre</a>
                             </li>
                           </ul>
+                        </div>
                       </div>
-                    </div>
                     </li>
                   </ul>
                 </div>
@@ -402,8 +376,7 @@
                       <a href="/findyourway">Find your Way</a>
                     </li>
                     <li>
-                      <a href="https://www.google.co.in/maps/@13.1615025,77.4593968,3a,60y,90t/data=!3m6!1e1!3m4!1s-9UefyZY73ob-pFS-YGTlA!2e0!7i13312!8i6656"
-                      target="_blank">Virtual Tour</a>
+                      <a href="https://www.google.co.in/maps/@13.1615025,77.4593968,3a,60y,90t/data=!3m6!1e1!3m4!1s-9UefyZY73ob-pFS-YGTlA!2e0!7i13312!8i6656" target="_blank">Virtual Tour</a>
                     </li>
                   </ul>
                 </div>
@@ -576,7 +549,7 @@
               </div>
               <div class="item">
                 <div class="item-name">
-                  <a href="/rasa">Rasā</a>
+                  <a href="/rasa">Rasa</a>
                 </div>
               </div>
               <div class="item">
@@ -609,8 +582,7 @@
 
       <footer>
         <div class="tagline">
-          India's first modern Gurukul, Nrityagram is a one-of-a-kind community
-          where dance is way of life
+          India's first modern Gurukul, Nrityagram is a one-of-a-kind community where dance is way of life
         </div>
         <div class="contact-info">
           <p>
@@ -639,23 +611,118 @@
             |
             <a href="#">Site Credits</a>
           </p>
-          <p>© {% year %} Nrityagram | All Rights Reserved</p>
-          <br />
+          <p>©
+            {% year %}
+            Nrityagram | All Rights Reserved</p>
+          <br/>
           <p class="light-text">Registration number 121232992897EF</p>
         </div>
       </footer>
     </main>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     {% if carousels %}
-    <script
-      src="{{ '/utils/owl.carousel.min.js' | url }}"
-      defer="defer"
-    ></script>
+      <!-- <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script> -->
+      <!-- <script src="{{ '/utils/owl_custom.js' | url }}"></script> -->
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script>
+        var flktyWrapAroundAuto = document.getElementsByClassName("flick-carousel--wraparound-autoplay")[0];
+        if (flktyWrapAroundAuto) {
+          var flkty_wrap = new Flickity(flktyWrapAroundAuto, {
+            wrapAround: true,
+            autoPlay: 2500,
+            freeScroll: true,
+            prevNextButtons: false,
+            pageDots: false
+          });
+          // This avoids FOUC -- flash of unstyled content
+          flktyWrapAroundAuto.style.opacity = 1.0;
+          flkty_wrap.on('pointerUp', function (event, pointer) {
+            flkty_wrap.playPlayer();
+          });
+        }
+
+        var review_content_flkty = document.getElementById("review-content-flkty");
+        var review_img_flkty = document.getElementById("review-img-flkty");
+        var review_nav_buttons = document.getElementById("review-nav-buttons");
+        var view_all_button = document.getElementById("view-all-button");
+
+        if (review_content_flkty && review_img_flkty && review_nav_buttons) {
+          var flkty__review_content = new Flickity('.review-content--carousel', {
+            wrapAround: true,
+            prevNextButtons: false,
+            pageDots: false,
+            draggable: false
+          });
+          var flkty__review_img = new Flickity('.review-img--carousel', {
+            wrapAround: true,
+            prevNextButtons: false,
+            pageDots: false,
+            draggable: false
+          });
+          // This avoids FOUC -- flash of unstyled content
+          // Turn on opacity after intialising flickity sliders
+          review_content_flkty.style.opacity = 1.0;
+          review_img_flkty.style.opacity = 1.0;
+          review_nav_buttons.style.opacity = 1.0;
+          if (view_all_button) 
+            view_all_button.style.opacity = 1.0;
+          
+          var previousButton = document.querySelector('.button--previous');
+          if (previousButton) {
+            previousButton.addEventListener('click', function () {
+              flkty__review_content.previous();
+              flkty__review_img.previous();
+            });
+          }
+
+          var nextButton = document.querySelector('.button--next');
+          if (nextButton) {
+            nextButton.addEventListener('click', function () {
+              flkty__review_content.next();
+              flkty__review_img.next();
+            });
+          }
+        }
+      </script>
     {% endif %}
+
+    {% if fb_feed %}
+      <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/kn_IN/sdk.js#xfbml=1&version=v11.0" nonce="T4oJ3qT7"></script>
+      <script>
+        //Resize Facebook feed
+        $(window).on('resize', function () {
+          setTimeout(function () {
+            changeFBPagePlugin()
+          }, 500);
+        });
+
+        $(window).on('load', function () {
+          setTimeout(function () {
+            changeFBPagePlugin()
+          }, 1500);
+        });
+
+        changeFBPagePlugin = function () {
+          var container_width = Number($('.fb-container').width()).toFixed(0);
+          console.log("FB container width = " + container_width);
+          var container_height = Number($('.fb-container').height()).toFixed(0);
+          if (!isNaN(container_width) && !isNaN(container_height)) {
+            $(".fb-page")
+              .attr("data-width", container_width)
+              .attr("data-height", container_height);
+          }
+          if (typeof FB !== 'undefined') {
+            FB
+              .XFBML
+              .parse();
+          }
+        };
+      </script>
+    {% endif %}
+
     <script>
       var logoImgMob = document.getElementsByClassName("logo")[0];
       var logoImgDesk = document.getElementsByClassName("logo")[1];
@@ -669,15 +736,14 @@
       var contentElem = document.getElementsByClassName("content")[0];
       var heroImage = document.getElementsByClassName("hero-image")[0];
       var heroSlider = document.getElementsByClassName("hero-slider")[0];
-      var vanillaSlideshow = document.getElementById(
-        "vanilla-slideshow-container"
-      );
-      var pageType = document.getElementById("page-type").dataset.pageType;
+      var vanillaSlideshow = document.getElementById("vanilla-slideshow-container");
+      var pageType = document
+        .getElementById("page-type")
+        .dataset
+        .pageType;
       // Global variables
-      const navbar_bg_color_solid =
-        "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%)";
-      var navbar_bg_color_trans =
-        "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)";
+      const navbar_bg_color_solid = "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%)";
+      var navbar_bg_color_trans = "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)";
       const navbar_height = "100px";
       const navbar_height_onscroll = "60px";
       const navbar_desk_height = "140px";
@@ -696,25 +762,25 @@
           mainElem.style.position = "static";
           _setnavbar_bgcolour();
         }
-        
+
         if (hamIcon.classList.contains("ham-open")) {
-          hamIcon.classList.remove("ham-open");
+          hamIcon
+            .classList
+            .remove("ham-open");
         }
       }
 
-      window.scroll({ behavior: "smooth" });
+      window.scroll({behavior: "smooth"});
 
       window.addEventListener("load", (event) => {
         if (pageType == "home") {
-          navbar_bg_color_trans =
-            "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%)";
+          navbar_bg_color_trans = "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%)";
           navBarDeskElem.style.background = navbar_bg_color_trans;
           navBarMobElem.style.background = navbar_bg_color_trans;
         }
         // make sure mobile menu is closed
         _close_menu();
       });
-
 
       window.addEventListener("unload", (event) => {
         // make sure mobile menu is closed
@@ -767,7 +833,9 @@
           logoImgMob.style.height = "40px";
           logoImgDesk.style.height = "110px";
           navBarMobElem.style.height = navbar_height_onscroll;
-          hamIcon.classList.add("ham-open");
+          hamIcon
+            .classList
+            .add("ham-open");
           // hamIcon.classList.toggle("ham-open");
         } else {
           mobileElem.style.minHeight = "100%";
@@ -778,7 +846,9 @@
           }
           // hamIcon.classList.toggle("ham-open");
           if (hamIcon.classList.contains("ham-open")) {
-            hamIcon.classList.remove("ham-open");
+            hamIcon
+              .classList
+              .remove("ham-open");
           }
           window.scrollTo(0, initial_scrollY_pos);
         }
@@ -794,6 +864,13 @@
         }
       }
 
+      function displayInfo(el, info) {
+        el.innerHTML = " " + info;
+      }
+      function hideInfo(el) {
+        el.innerHTML = "";
+      }
+
       // prevent download of images through mouse events
       $(document).ready(function () {
         $("img").bind("contextmenu", function (e) {
@@ -801,26 +878,25 @@
         });
       });
     </script>
-    {% if carousels %}
-    <script src="{{ '/utils/owl_custom.js' | url }}"></script>
-    {% endif %} {% if heroSlider %}
-    <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
-    <script>
-      vanillaSlideshow.init({
-        // auto slideshow, options: true or false
-        slideshow: true,
-        // slideshow delay
-        delay: 3500,
-        // display arrows, options: true or false
-        arrows: true,
-        // display indicators, options: true or false
-        indicators: false,
-        // start slideshow randomly, options: true or false
-        random: false,
-        // animation speed
-        animationSpeed: "1.75s",
-      });
-    </script>
+
+    {% if heroSlider %}
+      <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
+      <script>
+        vanillaSlideshow.init({
+          // auto slideshow, options: true or false
+          slideshow: true,
+          // slideshow delay
+          delay: 3500,
+          // display arrows, options: true or false
+          arrows: true,
+          // display indicators, options: true or false
+          indicators: false,
+          // start slideshow randomly, options: true or false
+          random: false,
+          // animation speed
+          animationSpeed: "1.75s"
+        });
+      </script>
     {% endif %}
   </body>
 </html>

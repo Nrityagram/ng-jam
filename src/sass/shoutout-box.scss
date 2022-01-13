@@ -1,0 +1,26 @@
+.shoutout-box {
+  background-color: var(--primary-color);
+  max-width: 100%;
+  min-height: -moz-fit-content;
+  min-height: -webkit-fit-content;
+  padding: calc(3em + 5vw) 0;
+  margin: 0 auto calc(3em + 5vw);
+  .shoutout-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 0;
+    color: var(--white-text-color);
+    font-size: clamp(20px, 3vw, 32px);
+    p {
+      max-width: 100%;
+      &:first-of-type {
+        padding-top: 0;
+      }
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

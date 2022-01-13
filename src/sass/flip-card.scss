@@ -61,6 +61,11 @@
   margin: 0;
   perspective: 1000px;
 
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
   .flip-card {
     width: inherit;
     height: inherit;
@@ -86,11 +91,11 @@
       flex-direction: column;
 
       -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-        0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1),
-        0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
-        0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
-        0 16px 16px rgba(0, 0, 0, 0.1);
+        0 2px 2px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.2),
+        0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.15),
+        0 4px 4px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.1),
+        0 16px 16px rgba(0, 0, 0, 0.15);
     }
 
     .card-front {
@@ -188,8 +193,10 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       }
       .card-content {
+        // max character count that fits = 341 (incl spaces)
         font-family: var(--serif-font-family);
         font-size: calc(16px + 0.3vw);
+        font-weight: var(--medium-font-weight);
         display: block;
         position: absolute;
         top: 4vw;
@@ -203,10 +210,9 @@
         display: block;
         position: absolute;
         width: 80%;
+        max-width: fit-content;
         text-align: center;
         bottom: 2vw;
-        border: 1px solid lime;
-        // outline: 1px solid var(--primary-color);
       }
       @media (max-width: 329px) {
         .card-title {
