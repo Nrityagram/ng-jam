@@ -1,10 +1,18 @@
+.shoutout-w-cards {
+  margin: 0 auto;
+  max-width: 67%;
+  @media (min-width: 1220px) {
+    max-width: 80.5%;
+  }
+}
+
 .shoutout-box {
   background-color: var(--primary-color);
   color: var(--white-text-color);
-  max-width: 100%;
+  max-width: 110%;
   min-height: -moz-fit-content;
   min-height: -webkit-fit-content;
-  padding: calc(5vw) 0;
+  padding: 20px 0 10px;
   // margin: 0 auto calc(3em + 5vw);
   margin: 0 auto;
   &.white-bg {
@@ -17,14 +25,15 @@
     justify-content: space-between;
     margin: 0 auto;
     padding: 0;
-    font-size: clamp(20px, 3vw, 32px);
-    max-width: 60%;
+    // max-width: 67%;
+    // width: 110%;
 
-    @media (min-width: 1220px) {
-      max-width: 80.5%;
-    }
+    // @media (min-width: 1220px) {
+      // max-width: 80.5%;
+    // }
 
     p {
+      font-size: calc(15px + 1vw);
       max-width: 100%;
       &:first-of-type {
         padding-top: 0;
