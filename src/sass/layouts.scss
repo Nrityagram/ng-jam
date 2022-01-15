@@ -6,9 +6,12 @@
 .quad-mosaic-grid-fixed {
   display: grid;
   height: 100%;
-  grid-template-rows: repeat(12, 2.75vw);
-  grid-template-columns: repeat(9, 2.75vw);
-  grid-gap: 20px;
+  // grid-template-rows: repeat(12, 2.75vw);
+  // grid-template-columns: repeat(9, 2.75vw);
+  grid-template-rows: repeat(12, 3.2vw);
+  grid-template-columns: repeat(9, 3.2vw);
+  // grid-gap: 20px;
+  grid-gap: 12px;
 
   .grid-item {
     display: flex;
@@ -46,11 +49,15 @@
       grid-column: span 5;
     }
     &.bottom-left {
-      grid-row: span 5;
+      grid-row: span 6;
+      // grid-row: span 6;
+      // grid-column: span 3; o
       grid-column: span 3;
     }
     &.bottom-right {
       grid-row: span 6;
+      // grid-row: span 5;
+      // grid-column: span 6; o
       grid-column: span 6;
     }
     &.bottom-left-gap {
@@ -83,6 +90,9 @@
   }
   .v-center {
     align-self: center;
+  }
+  .v-bottom {
+    align-self: flex-end;
   }
   .w-40 {
     width: 40%;
@@ -136,7 +146,8 @@
   margin-top: 4em !important;
 }
 .headline-space-above {
-  margin-top: calc(1em + 5vw) !important;
+  // margin-top: calc(1em + 5vw) !important;
+  margin-top: 1.5em !important;
 }
 
 .pad-top {

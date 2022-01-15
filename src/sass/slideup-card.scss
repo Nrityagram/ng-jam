@@ -121,9 +121,11 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 .slideup-card__content__copy {
   margin-top: 1.25rem;
 	padding: 0 1.25rem;
-	font-size: 0.85rem;
+	font-size: 0.9rem;
+  font-weight: 500;
 	line-height: 1rem;
 	font-family: var(--serif-font-family);
+  text-shadow: 1px 1px rgba(0,0,0,0.5);
   // text-align: center;
 	// font-size: calc(16px + 0.3vw);
 	// font-weight: var(--medium-font-weight);
