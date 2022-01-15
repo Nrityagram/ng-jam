@@ -33,6 +33,13 @@
     inset 0 0.3em 1em -0.15em rgba(0, 0, 0, 0.6);
 }
 
+.red-glass-button.card {
+  font-size: calc(10px + 0.27vw);
+  padding: 0.8em 1.25em;
+  min-width: 65%;
+  text-align: center;
+}
+
 .red-glass-button.wide {
   padding-left: 5em;
   padding-right: 5em;
