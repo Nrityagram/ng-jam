@@ -195,7 +195,7 @@
       .card-content {
         // max character count that fits = 341 (incl spaces)
         font-family: var(--serif-font-family);
-        font-size: calc(16px + 0.3vw);
+        font-size: calc(18px + 0.3vw);
         font-weight: var(--medium-font-weight);
         display: block;
         position: absolute;
@@ -377,9 +377,9 @@
           padding-bottom: 1vw;
         }
         .card-content {
-          font-size: calc(12px + 0.3vw);
-          line-height: calc(15px + 0.3vw);
-          top: 4vw;
+          font-size: calc(17px + 0.3vw);
+          line-height: calc(19px + 0.3vw);
+          top: 5vw;
         }
         .card-tagline {
           font-size: calc(16px + 0.3vw);
