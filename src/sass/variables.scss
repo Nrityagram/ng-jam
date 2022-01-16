@@ -1,8 +1,8 @@
 :root {
   --navbar-height: 100px;
-  --navbar-desk-height: 140px;
-  --navbar-desk-top-pos: 20px;
-  --navbar-desk-right-pos: 30px;
+  --navbar-desk-height: 110px;
+  --navbar-desk-top-pos: 0px;
+  --navbar-desk-right-pos: 15px;
   --navbar-bg-color: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0) 0%,
@@ -11,9 +11,10 @@
   --sans-serif-font-family: "Lato", sans-serif;
   --serif-font-family: "EB Garamond", serif;
   --navbar-item-color: #fff;
-  --navbar-subitem-color: #cfcfcf;
-  --navbar--accent-color: #f88538;
-  --navbar-dropdown-bg-color: rgba(0, 0, 0, 0.8);
+  --navbar-subitem-color: #e0e0e0;
+  --navbar-subitem-color-lite: #f3f3f3;
+  --navbar--accent-color: rgb(210, 31, 38);
+  --navbar-dropdown-bg-color: rgba(0, 0, 0, 0.88);
   --navbar-dropdown-border-color: #fff;
   --navbar-z-index: 10;
   --ham-menu-bg-color: #000;
@@ -39,6 +40,9 @@
   --thin-font-weight: 300;
   --medium-font-weight: 500;
   --strong-font-weight: 600;
+  --strong-sserif-font-weight: 700;
+  --medium-sserif-font-weight: 400;
+  --light-sserif-font-weight: 300;
   --desktop-body-fontsize: 20px;
   --mobile-body-fontsize: 22px;
   --small-fontsize: 14px;

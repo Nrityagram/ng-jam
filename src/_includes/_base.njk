@@ -382,7 +382,7 @@
                 </div>
               </div>
               <div class="item">
-                <div class="item-name">
+                <div class="item-name lrg">
                   <a href="/support">Support</a>
                   <ul>
                     <li>
@@ -485,7 +485,7 @@
                         </div>
                       </div>
                     </li>
-                    <li>
+                    <li class="solo">
                       <a href="/performancemap">Performances</a>
                     </li>
                   </ul>
@@ -495,7 +495,7 @@
                 <div class="item-name">
                   <a href="/gurukula/">School</a>
                   <ul>
-                    <li>
+                    <li class="solo">
                       <a href="/danceprof/">Dance Professionals</a>
                     </li>
                     <li>
@@ -520,13 +520,13 @@
                 <div class="item-name">
                   <a href="/community/">Community</a>
                   <ul>
-                    <li>
+                    <li class="solo">
                       <a href="/danceaware/">Dance Awareness</a>
                     </li>
-                    <li>
+                    <li class="solo">
                       <a href="/villageoutreach">Village Outreach</a>
                     </li>
-                    <li>
+                    <li class="solo">
                       <a href="/supportingartists">Supporting Artists</a>
                     </li>
                     <li>
@@ -556,16 +556,16 @@
                 <div class="item-name">
                   <a href="#">People</a>
                   <ul>
-                    <li>
+                    <li class="solo">
                       <a href="/protima">Protima Gauri</a>
                     </li>
-                    <li>
+                    <li class="solo">
                       <a href="/surupa">Surupa Sen</a>
                     </li>
-                    <li>
+                    <li class="solo">
                       <a href="/pavithra">Pavithra Reddy</a>
                     </li>
-                    <li>
+                    <li class="solo">
                       <a href="/lynne">Lynne Fernandez</a>
                     </li>
                   </ul>
@@ -746,8 +746,8 @@
       var navbar_bg_color_trans = "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)";
       const navbar_height = "100px";
       const navbar_height_onscroll = "60px";
-      const navbar_desk_height = "140px";
-      const navbar_desk_height_onscroll = "110px";
+      const navbar_desk_height = "110px";
+      const navbar_desk_height_onscroll = "90px";
 
       // save scrollY position when ham menu opens
       // and use it to scroll back the page below when menu closes
@@ -791,8 +791,8 @@
         let fromTop = window.scrollY;
 
         if (fromTop > 0) {
-          logoImgMob.style.height = "40px";
-          logoImgDesk.style.height = "80px";
+          logoImgMob.style.height = "30px";
+          logoImgDesk.style.height = "60px";
           navBarMobElem.style.height = navbar_height_onscroll;
           navBarDeskElem.style.height = navbar_desk_height_onscroll;
           navBarDeskElem.style.background = navbar_bg_color_solid;
@@ -803,8 +803,8 @@
 
         if (fromTop < 1) {
           if (!hamMenuElem.checked) {
-            logoImgMob.style.height = "80px";
-            logoImgDesk.style.height = "110px";
+            logoImgMob.style.height = "60px";
+            logoImgDesk.style.height = "85px";
             navBarMobElem.style.height = navbar_height;
             navBarDeskElem.style.height = navbar_desk_height;
             navBarDeskElem.style.background = navbar_bg_color_trans;
@@ -831,7 +831,7 @@
             navBarMobElem.style.background = navbar_bg_color_solid;
           }
           logoImgMob.style.height = "40px";
-          logoImgDesk.style.height = "110px";
+          logoImgDesk.style.height = "80px";
           navBarMobElem.style.height = navbar_height_onscroll;
           hamIcon
             .classList

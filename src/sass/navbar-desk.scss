@@ -14,13 +14,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5em;
+  padding: 0 0.5em;
   margin: 0;
   background: var(--navbar-bg-color);
   transition: all 0.5s ease-in-out;
   z-index: var(--navbar-z-index);
   .logo {
-    height: 110px;
+    // height: 110px;
+    height: 85px;
   }
   position: relative;
 }
@@ -40,7 +41,7 @@
   .multi-level {
     display: flex;
     justify-content: flex-end;
-    padding: 0.5em 0 0.25em;
+    padding: 0.8em 0 0.25em;
 
     .item {
       position: relative;
@@ -181,6 +182,13 @@
   font-size: 16px;
 }
 
+.desk .multi-level .item > .item-name.lrg {
+  margin-top: -0.1em;
+  > a {
+    font-size: 18px;
+  }
+}
+
 .desk .multi-level#ml1 {
   .ml1-menu-section {
     display: flex;
@@ -189,11 +197,20 @@
     border-bottom: 1px solid #888;
   }
 
-  .item-name > a {
+  .item-name {
+  > a {
     text-transform: uppercase;
-    font-weight: var(--strong-font-weight);
+    font-weight: var(--strong-sserif-font-weight);
     color: var(--primary-color);
   }
+  .sub-item .item-name {
+    >a {
+      font-size: 16px;
+      color: var(--navbar-subitem-color-lite);
+      font-weight: var(--light-sserif-font-weight);
+    }
+  }
+}
 
   justify-content: flex-end;
 
@@ -211,11 +228,28 @@
 }
 
 .desk .multi-level#ml2 {
-  padding-top: 3px;
-  .item-name > a {
-    text-transform: uppercase;
-    font-weight: var(--medium-font-weight);
-    font-size: 22px;
-    color: #fff;
+  padding-top: 8px;
+  .item-name {
+    > a {
+      text-transform: uppercase;
+      font-weight: var(--medium-sserif-font-weight);
+      font-size: 19px;
+      color: #fff;
+    }
+    .sub-item .item-name {
+      > a {
+        font-size: 16px;
+        color: var(--navbar-subitem-color-lite);
+        font-weight: var(--light-sserif-font-weight);
+      }
+    }
+    li.solo {
+      > a {
+        font-size: 16px;
+        color: var(--navbar-subitem-color-lite);
+        font-weight: var(--light-sserif-font-weight);
+      }
+    }
   }
 }
+
