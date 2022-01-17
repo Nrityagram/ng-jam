@@ -6,330 +6,331 @@ pageType: "home"
 ---
 
 {% if heroImage %}
-<div class="hero-image-container">
-  <div class="hero-image">
-    <picture>
-      <source srcset="{{ heroDesk | url }}" media="(min-width: 1025px)" />
-      <source srcset="{{ heroTab | url }}" media="(min-width: 600px)" />
-      <img src="{{ heroMob | url }}" alt="hero" height="auto" />
-    </picture>
-  </div>
-  <div class="hero-text">{{ heroText }}</div>
-  <div
+  <div class="hero-image-container">
+    <div class="hero-image">
+      <picture>
+        <source srcset="{{ heroDesk | url }}" media="(min-width: 1025px)"/>
+        <source srcset="{{ heroTab | url }}" media="(min-width: 600px)"/>
+        <img src="{{ heroMob | url }}" alt="hero" height="auto"/>
+      </picture>
+    </div>
+    <div class="hero-text">{{ heroText }}</div>
+    <div
     class="hero-credit"
     data-hero-credit-desk="{{ heroDeskCredit }}"
     data-hero-credit-tablet="{{ heroTabCredit }}"
     data-hero-credit-mobile="{{ heroMobCredit }}"
   ></div>
-</div>
-{% endif %} {% if heroSlider %}
-<div id="vanilla-slideshow-container">
-  <div id="vanilla-slideshow">
-    <div class="vanilla-slide">
-      <picture>
-        <source
+  </div>
+{% endif %}
+{% if heroSlider %}
+  <div id="vanilla-slideshow-container">
+    <div id="vanilla-slideshow">
+      <div class="vanilla-slide">
+        <picture>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1580623152/1_w9kze2.jpg
           "
           media="(min-width: 1025px)"
-        />
-        <source
+/>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1582806884/ipad/1_vbycul.jpg
           "
           media="(min-width: 600px)"
-        />
-        <img
+/>
+          <img
           src="https://res.cloudinary.com/nrityagram/image/upload/v1582614688/mobile/1_uj92ec.jpg"
           alt="slide 1"
           height="auto"
-        />
-      </picture>
-      <div
+/>
+        </picture>
+        <div
         class="home-credit meta-data"
         data-metadata-desk="Darial Sneed"
         data-metadata-tablet="Darial Sneed"
         data-metadata-mobile="Darial Sneed"
       ></div>
-    </div>
+      </div>
 
-    <div class="vanilla-slide">
-      <picture>
-        <source
+      <div class="vanilla-slide">
+        <picture>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1580623152/2_igyscd.jpg
           "
           media="(min-width: 1025px)"
-        />
-        <source srcset="
+/>
+          <source srcset="
         https://res.cloudinary.com/nrityagram/image/upload/v1582806909/ipad/2_yjjoeu.jpg
-        " media="(min-width: 600px)"" />
-        <img
+        " media="(min-width: 600px)"/>
+          <img
           src="https://res.cloudinary.com/nrityagram/image/upload/v1582614688/mobile/2_xit6ye.jpg"
           alt="slide 2"
           height="auto"
-        />
-      </picture>
-      <div
+/>
+        </picture>
+        <div
         class="home-credit meta-data"
         data-metadata-desk="Nan Melville"
         data-metadata-tablet="Nan Melville"
         data-metadata-mobile="Nan Melville"
       ></div>
-    </div>
+      </div>
 
-    <div class="vanilla-slide">
-      <picture>
-        <source
+      <div class="vanilla-slide">
+        <picture>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1580623151/3_z3dsxk.jpg
           "
           media="(min-width: 1025px)"
-        />
-        <source
+/>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1582806870/ipad/3_qefszj.jpg
           "
           media="(min-width: 600px)"
-        />
-        <img
+/>
+          <img
           src="https://res.cloudinary.com/nrityagram/image/upload/v1582614688/mobile/3_lh4ivi.jpg"
           alt="slide 3"
           height="auto"
-        />
-      </picture>
-      <div
+/>
+        </picture>
+        <div
         class="home-credit meta-data"
         data-metadata-desk="Shalini Jain"
         data-metadata-tablet="Shalini Jain"
         data-metadata-mobile="Shalini Jain"
       ></div>
-    </div>
+      </div>
 
-    <div class="vanilla-slide">
-      <picture>
-        <source
+      <div class="vanilla-slide">
+        <picture>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1580623152/4_dtfktn.jpg
           "
           media="(min-width: 1025px)"
-        />
-        <source
+/>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1582806958/ipad/4_vo7dnv.jpg
           "
           media="(min-width: 600px)"
-        />
-        <img
+/>
+          <img
           src="https://res.cloudinary.com/nrityagram/image/upload/v1582614688/mobile/4_nnwreb.jpg"
           alt="slide 4"
           height="auto"
-        />
-      </picture>
-      <div
+/>
+        </picture>
+        <div
         class="home-credit meta-data"
         data-metadata-desk="Karthik Venkatraman"
         data-metadata-tablet="Karthik Venkatraman"
         data-metadata-mobile="Karthik Venkatraman"
       ></div>
-    </div>
+      </div>
 
-    <div class="vanilla-slide">
-      <picture>
-        <source
+      <div class="vanilla-slide">
+        <picture>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1580623153/5_j9vcbn.jpg
           "
           media="(min-width: 1025px)"
-        />
-        <source
+/>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1582806876/ipad/5_k1rpny.jpg
           "
           media="(min-width: 600px)"
-        />
-        <img
+/>
+          <img
           src="https://res.cloudinary.com/nrityagram/image/upload/v1582614687/mobile/5_zqwm3d.jpg"
           alt="slide 5"
           height="auto"
-        />
-      </picture>
-      <div
+/>
+        </picture>
+        <div
         class="home-credit meta-data"
         data-metadata-desk="Karthik Venkatraman"
         data-metadata-tablet="Karthik Venkatraman"
         data-metadata-mobile="Karthik Venkatraman"
       ></div>
-    </div>
+      </div>
 
-    <div class="vanilla-slide">
-      <picture>
-        <source
+      <div class="vanilla-slide">
+        <picture>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1616415275/6-desk_jnz2ib.jpg
           "
           media="(min-width: 1025px)"
-        />
-        <source
+/>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1616415292/ipad/6-ipad_bazo8l.jpg
           "
           media="(min-width: 600px)"
-        />
-        <img
+/>
+          <img
           src="https://res.cloudinary.com/nrityagram/image/upload/v1616415305/mobile/6-mobile_n2wsme.jpg"
           alt="slide 6"
           height="auto"
-        />
-      </picture>
-      <div
+/>
+        </picture>
+        <div
         class="home-credit meta-data"
         data-metadata-desk="Karthik Venkatraman"
         data-metadata-tablet="Karthik Venkatraman"
         data-metadata-mobile="Karthik Venkatraman"
       ></div>
-    </div>
+      </div>
 
-    <div class="vanilla-slide">
-      <picture>
-        <source
+      <div class="vanilla-slide">
+        <picture>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1580623153/7_s1r4xp.jpg
           "
           media="(min-width: 1025px)"
-        />
-        <source
+/>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1582806791/ipad/7_xqqmk2.jpg
           "
           media="(min-width: 600px)"
-        />
-        <img
+/>
+          <img
           src="https://res.cloudinary.com/nrityagram/image/upload/v1582614660/mobile/7_ez1ojd.jpg"
           alt="slide 7"
           height="auto"
-        />
-      </picture>
-      <div
+/>
+        </picture>
+        <div
         class="home-credit meta-data"
         data-metadata-desk="Courtesy Serendipity Arts Festival"
         data-metadata-tablet="Courtesy Serendipity Arts Festival"
         data-metadata-mobile="Courtesy Serendipity Arts Festival"
       ></div>
-    </div>
+      </div>
 
-    <div class="vanilla-slide">
-      <picture>
-        <source
+      <div class="vanilla-slide">
+        <picture>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1580623152/8_l4z3ac.jpg
           "
           media="(min-width: 1025px)"
-        />
-        <source
+/>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1620417697/ipad/08-dhruva-ipad_ppl3ra.jpg
           "
           media="(min-width: 600px)"
-        />
-        <img
+/>
+          <img
           src="https://res.cloudinary.com/nrityagram/image/upload/v1620417721/mobile/08-dhruva-mobile_arlb0y.jpg"
           alt="slide 8"
           height="auto"
-        />
-      </picture>
-      <div
+/>
+        </picture>
+        <div
         class="home-credit meta-data"
         data-metadata-desk="Courtesy NCPA"
         data-metadata-tablet="Karthik Venkatraman"
         data-metadata-mobile="Karthik Venkatraman"
       ></div>
-    </div>
+      </div>
 
-    <div class="vanilla-slide">
-      <picture>
-        <source
+      <div class="vanilla-slide">
+        <picture>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1580623153/9_uashiv.jpg
           "
           media="(min-width: 1025px)"
-        />
-        <source
+/>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1582806814/ipad/9_rbutk3.jpg
           "
           media="(min-width: 600px)"
-        />
-        <img
+/>
+          <img
           src="https://res.cloudinary.com/nrityagram/image/upload/v1582614660/mobile/9_s1ma2d.jpg"
           alt="slide 9"
           height="auto"
-        />
-      </picture>
-      <div
+/>
+        </picture>
+        <div
         class="home-credit meta-data"
         data-metadata-desk="Karthik Venkatraman"
         data-metadata-tablet="Karthik Venkatraman"
         data-metadata-mobile="Karthik Venkatraman"
       ></div>
-    </div>
+      </div>
 
-    <div class="vanilla-slide">
-      <picture>
-        <source
+      <div class="vanilla-slide">
+        <picture>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1588620010/10_wjf80e.jpg
           "
           media="(min-width: 1025px)"
-        />
-        <source
+/>
+          <source
           srcset="
             https://res.cloudinary.com/nrityagram/image/upload/v1582806794/ipad/10_nrrsuc.jpg
           "
           media="(min-width: 600px)"
-        />
-        <img
+/>
+          <img
           src="https://res.cloudinary.com/nrityagram/image/upload/v1582614660/mobile/10_d5qtsj.jpg"
           alt="slide 10"
           height="auto"
-        />
-      </picture>
-      <div
+/>
+        </picture>
+        <div
         class="home-credit meta-data"
         data-metadata-desk="Prof. Benny Shilo"
         data-metadata-tablet="Prof. Benny Shilo"
         data-metadata-mobile="Prof. Benny Shilo"
       ></div>
+      </div>
     </div>
-  </div>
 
-  <!-- slideshow arrows -->
-  <div id="vanilla-slideshow-previous">
-    <img src="{{ '/img/left-chevron.svg' | url }}" alt="slider arrow" />
-  </div>
-  <div id="vanilla-slideshow-next">
-    <img src="{{ '/img/right-chevron.svg' | url }}" alt="slider arrow" />
-  </div>
-  <div id="home_tagline">
-    <div class="tagline-text">
+    <!-- slideshow arrows -->
+    <div id="vanilla-slideshow-previous">
+      <img src="{{ '/img/left-chevron.svg' | url }}" alt="slider arrow"/>
+    </div>
+    <div id="vanilla-slideshow-next">
+      <img src="{{ '/img/right-chevron.svg' | url }}" alt="slider arrow"/>
+    </div>
+    <div id="home_tagline">
+      <div class="tagline-text">
       “These are among the world’s greatest dancers!”
     </div>
-    <div class="tagline-credit">The New York Times</div>
-  </div>
-  <div id="cta-box-desk">
-    <div class="cta-headline">{{ cta_headline }}</div>
-    <div class="cta-bodytext">
-      {{ cta_bodytext }}
+      <div class="tagline-credit">The New York Times</div>
     </div>
-    <div class="red-glass-button no-dropshadow">Join Us</div>
+    <div id="cta-box-desk">
+      <div class="cta-headline">{{ cta_headline }}</div>
+      <div class="red-glass-button no-dropshadow sml">Join Us</div>
+    </div>
   </div>
-</div>
 {% endif %}
 
 {{ content | safe }}
 
 {% if heroText %}
-<script>
-  gsap.to(".hero-text", { duration: 2, y: 30 });
-</script>
+  <script>
+    gsap.to(".hero-text", {
+      duration: 2,
+      y: 30
+    });
+  </script>
 {% endif %}
