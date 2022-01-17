@@ -15,7 +15,8 @@
 
   .tagline-text {
     display: block;
-    font-size: calc(17px + 1vw);
+    // font-size: calc(17px + 1vw);
+    font-size: calc(12px + 1vw);
     max-width: 85%;
     align-self: center;
   }
@@ -23,7 +24,7 @@
     display: block;
     font-size: calc(8px + 0.8vw);
     align-self: center;
-    line-height: 1.5em;
+    line-height: 1.3em;
   }
 }
 .home-credit {
@@ -50,6 +51,6 @@
 
   #home_tagline {
     // bottom: 60px;
-    bottom: 6vh;
+    bottom: 3vh;
   }
 }
