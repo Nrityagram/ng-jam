@@ -75,7 +75,7 @@
           // keep top margin at 2px only
           // greater than 2px will make the dropdown disappear
           // when mouse moves off the item
-          margin: 2px 0 0;
+          margin: 7px 0 0;
           padding: 0;
           z-index: calc(var(--navbar-z-index) + 1);
           background-color: var(--navbar-dropdown-bg-color);

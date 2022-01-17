@@ -180,7 +180,10 @@
       align-items: center;
       transform: rotateY(180deg);
       z-index: 1;
-      background-color: var(--primary-color);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      // background-color: var(--primary-color);
 
       .card-title {
         font-family: var(--serif-font-family);
@@ -199,19 +202,19 @@
         font-weight: var(--medium-font-weight);
         display: block;
         position: absolute;
-        top: 4vw;
+        top: 6vw;
         text-align: center;
         padding: 1em 2em;
       }
       .card-tagline {
-        font-family: var(--sans-serif-font-family);
-        font-size: calc(20px + 0.3vw);
-        font-weight: var(--strong-font-weight);
+        // font-family: var(--sans-serif-font-family);
+        // font-size: calc(20px + 0.3vw);
+        // font-weight: var(--strong-font-weight);
         display: block;
         position: absolute;
-        width: 80%;
-        max-width: fit-content;
-        text-align: center;
+        width: 100%;
+        // max-width: fit-content;
+        // text-align: center;
         bottom: 2vw;
       }
       @media (max-width: 329px) {
@@ -379,7 +382,7 @@
         .card-content {
           font-size: calc(15px + 0.3vw);
           line-height: calc(17px + 0.3vw);
-          top: 5vw;
+          top: 8vw;
         }
         .card-tagline {
           font-size: calc(16px + 0.3vw);
@@ -396,7 +399,7 @@
         .card-content {
           font-size: calc(13px + 0.3vw);
           line-height: calc(16px + 0.3vw);
-          top: 4vw;
+          top: 8vw;
         }
         .card-tagline {
           font-size: calc(18px + 0.3vw);
@@ -413,7 +416,7 @@
         .card-content {
           font-size: calc(14px + 0.3vw);
           line-height: calc(17px + 0.3vw);
-          top: 5vw;
+          top: 8vw;
         }
         .card-tagline {
           font-size: calc(18px + 0.3vw);
@@ -430,7 +433,7 @@
         .card-content {
           font-size: calc(16px + 0.3vw);
           line-height: calc(19px + 0.3vw);
-          top: 5vw;
+          top: 8vw;
         }
         .card-tagline {
           font-size: calc(20px + 0.3vw);
