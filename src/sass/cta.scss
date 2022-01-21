@@ -25,10 +25,29 @@
   max-height: -moz-fit-content;
   max-height: -webkit-fit-content;
   position: absolute;
-  // bottom: calc(2vh + 110px);
-  bottom: 4vh;
-  right: 60px;
   padding: 0.5em 1.7em 0.5em;
+
+  &.home1 {
+    bottom: 200px;
+    right: 60px;
+  }
+
+  &.home2 {
+    bottom: 11vh;
+    right: 60px;
+  }
+
+  &.home3 {
+    bottom: 11vh;
+    left: 60px;
+  }
+
+  &.home4 {
+    top: 115px;
+    left: 22px;
+  }
+
+
   .cta-headline {
     color: var(--cta-font-colour-light);
   }

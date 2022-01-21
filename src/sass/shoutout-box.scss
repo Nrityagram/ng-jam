@@ -1,6 +1,9 @@
 .shoutout-w-cards {
   margin: 0 auto;
   max-width: 67%;
+  &.full-bleed {
+    max-width: 100%;
+  }
   @media (min-width: 1220px) {
     max-width: 80.5%;
   }
