@@ -690,7 +690,7 @@
 
     {% if fb_feed %}
       <div id="fb-root"></div>
-      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/kn_IN/sdk.js#xfbml=1&version=v11.0" nonce="T4oJ3qT7"></script>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="T4oJ3qT7"></script>
       <script>
         //Resize Facebook feed
         $(window).on('resize', function () {
@@ -707,7 +707,6 @@
 
         changeFBPagePlugin = function () {
           var container_width = Number($('.fb-container').width()).toFixed(0);
-          console.log("FB container width = " + container_width);
           var container_height = Number($('.fb-container').height()).toFixed(0);
           if (!isNaN(container_width) && !isNaN(container_height)) {
             $(".fb-page")
