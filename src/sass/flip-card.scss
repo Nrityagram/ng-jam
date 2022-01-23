@@ -176,7 +176,7 @@
     }
 
     .card-back {
-      justify-content: center;
+      // justify-content: center;
       align-items: center;
       transform: rotateY(180deg);
       z-index: 1;
@@ -203,8 +203,10 @@
         display: block;
         position: absolute;
         bottom: 6.5vw;
-        text-align: center;
-        padding: 1em 2em;
+        left: 10px;
+        width: 80%;
+        // text-align: center;
+        padding: 1em 1.3em;
       }
       .card-tagline {
         // font-family: var(--sans-serif-font-family);
