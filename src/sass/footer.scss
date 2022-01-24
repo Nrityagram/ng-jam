@@ -11,34 +11,37 @@ footer {
   a {
     text-decoration: none;
     color: var(--white-text-color);
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
 
   .tagline {
+    font-size: 0.78em;
     width: 100%;
     background-color: var(--accent-color-1);
-    padding: 0.2em 0;
+    padding: 0.35em 0;
   }
   .contact-info {
+    font-size: 0.85em;
     width: 40%;
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    border-bottom: 1px solid var(--white-text-color);
+    border-bottom: 1px solid var(--light-grey-color);
   }
   .address {
-    font-size: 0.85em;
-    padding: 1em 0;
+    font-size: 0.65em;
+    padding: 1.5em 0;
   }
   .terms-n-conditions {
-    font-size: 0.7em;
+    font-size: 0.65em;
     line-height: 0.6em;
     a {
       font-size: 1em;
     }
   }
   .light-text {
-    color: var(--accent-color-1);
+    font-size: 0.75em;
+    color: var(--accent-color-4);
   }
 }
 
