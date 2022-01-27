@@ -10,10 +10,27 @@
   grid-template-columns: repeat(9, 3.2vw);
   grid-gap: 12px;
 
+  &.large-mosaic {
+    grid-template-rows: repeat(12, 3.4vw);
+    grid-template-columns: repeat(9, 3.4vw);
+    grid-gap: 16px;
+    // outline: 1px solid hotpink;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: var(--medium-fontsize);
+    padding: 5px;
+    min-width: 100%;
+    background-image: none;
+    transition: background-image 0.5s;
+  }
+
   .grid-item {
     display: flex;
     align-items: flex-end;
-    font-size: clamp(9px, 3vw, 1.2em);
+    // font-size: clamp(9px, 5vw, 1.2em);
     border-radius: 8px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,7 +38,8 @@
     transition: all ease-in-out 300ms;
     overflow: hidden;
     // position: relative;
-    a {
+
+    .info {
       color: #fff;
       text-decoration: none;
       font-size: var(--medium-fontsize);
@@ -29,7 +47,6 @@
       min-width: 100%;
       background-image: none;
       transition: background-image 0.5s;
-
       i {
         vertical-align: middle;
         filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
@@ -37,13 +54,15 @@
       }
 
       .hover-label {
+        font-size: calc(8px + 0.85vw);
         filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 1));
         display: none;
       }
     }
 
     &:hover {
-      a {
+      cursor: pointer;
+      .info {
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
       }
       i {
@@ -110,11 +129,15 @@
   .v-center {
     align-self: center;
   }
-  .v-bottom {
+  .v-bottom { 
+    // outline: 1px solid lime;
     align-self: flex-end;
   }
   .w-40 {
     width: 40%;
+  }
+  .w-30 {
+    max-width: 30%;
   }
 }
 
@@ -162,11 +185,15 @@
 }
 .space-above {
   // margin-top: calc(3em + 5vw) !important;
-  margin-top: 4em !important;
+  margin-top: 2em !important;
 }
 .headline-space-above {
   // margin-top: calc(1em + 5vw) !important;
-  margin-top: 1.5em !important;
+  margin-top: 0.25em !important;
+}
+.headline-no-topgap {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .pad-top {
@@ -181,4 +208,11 @@
 }
 .airgap {
   width: 50px;
+}
+
+
+.salmon-section {
+  margin-top: 2em !important;
+  background-color: var(--accent-color-5);
+  padding: 3em 0;
 }

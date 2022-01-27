@@ -652,27 +652,28 @@
 
         var review_content_flkty = document.getElementById("review-content-flkty");
         var review_img_flkty = document.getElementById("review-img-flkty");
-        var review_nav_buttons = document.getElementById("review-nav-buttons");
+        // var review_nav_buttons = document.getElementById("review-nav-buttons");
         var view_all_button = document.getElementById("view-all-button");
 
-        if (review_content_flkty && review_img_flkty && review_nav_buttons) {
-          var flkty__review_content = new Flickity('.review-content--carousel', {
-            wrapAround: true,
-            prevNextButtons: false,
-            pageDots: false,
-            draggable: false
-          });
+        if (review_content_flkty && review_img_flkty) {
           var flkty__review_img = new Flickity('.review-img--carousel', {
             wrapAround: true,
             prevNextButtons: false,
             pageDots: false,
-            draggable: false
+            draggable: false,
+            asNavFor: '.review-content--carousel'
+          });
+          var flkty__review_content = new Flickity('.review-content--carousel', {
+            wrapAround: true,
+            prevNextButtons: true,
+            pageDots: true,
+            draggable: true,
           });
           // This avoids FOUC -- flash of unstyled content
           // Turn on opacity after intialising flickity sliders
           review_content_flkty.style.opacity = 1.0;
           review_img_flkty.style.opacity = 1.0;
-          review_nav_buttons.style.opacity = 1.0;
+          // review_nav_buttons.style.opacity = 1.0;
           if (view_all_button) 
             view_all_button.style.opacity = 1.0;
           

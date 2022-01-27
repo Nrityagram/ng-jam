@@ -7,6 +7,9 @@
   &.full-bleed {
     max-width: 100%;
   }
+  &.red-bg {
+    background-color: var(--primary-color);
+  }
 }
 
 .shoutout-box {
@@ -34,6 +37,10 @@
     // @media (min-width: 1220px) {
       // max-width: 80.5%;
     // }
+
+      h1 {
+        max-width: 100%;
+      }
 
     p {
       font-size: calc(11px + 1vw);
