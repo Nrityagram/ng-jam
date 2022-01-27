@@ -27,6 +27,23 @@ $wnd-lg: 1200px;
   padding-left: 3em;
   padding-right: 3em;
   margin: 1em auto;
+
+  &[data-icon] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    vertical-align: middle;
+
+    i {
+      color: #fff;
+      font-size: calc(6px + var(--small-fontsize));
+    }
+
+    span {
+      color: #fff;
+    }
+  }
 }
 
 .red-glass-button.no-space-above {

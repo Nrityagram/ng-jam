@@ -7,7 +7,7 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 	display: grid;
 	place-items: center;
   	justify-items: stretch;
-	gap: calc(0.65rem + 0.5vw);
+	gap: calc(0.62rem + 0.5vw);
 	padding: 1rem 0;
 	min-width: 100%;
 	margin: 0 auto;
@@ -44,7 +44,7 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 
 	@media (min-width: $wnd-lg) {
-		height: 26vw;
+		height: 29vw;
 	}
 
   	&.card-pair {
@@ -53,7 +53,7 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 			height: 42vw;
 		}
 		@media (min-width: $wnd-lg) {
-			height: 26vw;
+			height: 29vw;
 		}
   	}
 
@@ -147,14 +147,14 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   @media (min-width: $wnd-lg) {
-  	font-size: calc(1.2rem + 0.8vw);
-  	line-height: calc(1.3rem + 0.8vw);
+  	font-size: calc(1rem + 0.8vw);
+  	line-height: calc(1.02rem + 0.8vw);
 	  margin-bottom: calc(0.9em + 0.8vw);
   }
 }
 
 .slideup-card__content__copy {
-  	margin-top: 1.25rem;
+  	margin-top: 1.5rem;
   	font-weight: 500;
 	font-family: var(--serif-font-family);
   	text-shadow: 1px 1px rgba(0,0,0,0.5);
@@ -162,13 +162,13 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 	@media (min-width: $wnd-md) {
 		font-size: calc(0.75rem + 0.6vw);
 		line-height: calc(0.77rem + 0.6vw);
-		margin-bottom: calc(0.9em + 0.8vw);
+		margin-bottom: calc(0.3em + 0.4vw);
 	}
 
 	@media (min-width: $wnd-lg) {
 		font-size: calc(0.7rem + 0.4vw);
 		line-height: calc(0.75rem + 0.4vw);
-		margin-bottom: calc(0.9em + 0.8vw);
+		margin-bottom: calc(0.3em + 0.4vw);
 	}
 }
 
