@@ -220,3 +220,14 @@
   background-color: var(--accent-color-5);
   padding: 3em 0;
 }
+
+.button-overlay {
+  position: relative;
+
+  .button-bot-right {
+    position: absolute;
+    bottom: 12px;
+    right: 8px;
+    z-index: 2;
+  }
+}
