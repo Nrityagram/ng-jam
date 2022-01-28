@@ -5,7 +5,7 @@ $wnd-lg: 1200px;
   /* border: 1px solid var(--ng-timeline-red); */
   border: none;
   border-radius: 0.3rem;
-  background: var(--primary-color);
+  background: #fff;
   background: linear-gradient(
     to bottom,
     var(--primary-color) 0%,
@@ -51,10 +51,15 @@ $wnd-lg: 1200px;
 }
 
 .red-glass-button.no-dropshadow {
-  // box-shadow: none;
   // remove shadow under the button
   box-shadow: inset 0 -0.3em 0.8em -0.3em rgba(0, 0, 0, 0),
     inset 0 0.3em 1em -0.15em rgba(0, 0, 0, 0.6);
+}
+
+.red-glass-button.light.no-dropshadow {
+  // remove shadow under the button
+  box-shadow: inset 0 -0.3em 0.8em -0.3em rgba(0, 0, 0, 0),
+    inset 0 0.3em 1em -0.15em rgba(0, 0, 0, 0.2);
 }
 
 .red-glass-button.card {
