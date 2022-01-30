@@ -113,6 +113,10 @@
   align-content: center;
   &.solo {
     justify-content: center;
+    gap: 25px;
+    &.no-gap {
+      gap: 0;
+    }
   }
   &.primary-section {
     max-width: 67%;
