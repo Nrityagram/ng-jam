@@ -67,7 +67,7 @@
 .home-credit {
   position: absolute;
   writing-mode: vertical-rl;
-  top: 60vh;
+  bottom: 2vh;
   right: 3px;
   font-size: var(--image-credit-font-size-large);
   font-family: var(--sans-serif-font-family);
@@ -83,7 +83,7 @@
 // Desktop + Tablet
 @media only screen and (min-width: 800px) {
   .home-credit {
-    top: 60vh;
+    bottom: 2vh;
   }
 
   .home_tagline {
