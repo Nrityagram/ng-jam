@@ -1,7 +1,11 @@
 .shoutout-w-cards {
   margin: 0 auto;
+  padding-bottom: 2em;
   max-width: 67%;
-  @media (min-width: 1220px) {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1200px) {
     max-width: 80.5%;
   }
   &.full-bleed {
@@ -31,16 +35,10 @@
     justify-content: space-between;
     margin: 0 auto;
     padding: 0;
-    // max-width: 67%;
-    // width: 110%;
 
-    // @media (min-width: 1220px) {
-      // max-width: 80.5%;
-    // }
-
-      h1 {
-        max-width: 100%;
-      }
+    h1 {
+      max-width: 100%;
+    }
 
     p {
       font-size: calc(11px + 1vw);

@@ -111,9 +111,12 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
+  max-width: 100%;
+
   &.solo {
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
+    // gap: 0.75em;
     &.no-gap {
       gap: 0;
     }
@@ -156,6 +159,13 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  max-width: 100%;
+  padding: 0;
+  gap: 0.75em;
+  
+  &[data-gridgap="0.25em"] {
+    gap: 0.25em;
+  }
   &[data-gridgap="12px"] {
     gap: 12px;
   }
@@ -168,6 +178,45 @@
   &.primary-section {
     max-width: 67%;
     margin: 0 auto;
+  }
+}
+
+.std-column-width {
+  min-width: 67%;
+  max-width: 67%;
+  margin: 0 auto;
+  padding-bottom: 0.5em;
+
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+
+  h1,
+  p {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.5em;
+  }
+
+}
+
+.wide-column-width {
+  min-width: 67%;
+  max-width: 67%;
+  margin: 0 auto;
+
+  h1,
+  p {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.5em;
+  }
+
+  @media (min-width: 1200px) {
+    min-width: 80.5%;
+    max-width: 80.5%;
   }
 }
 
@@ -222,8 +271,41 @@
 }
 
 
+.page-section {
+  padding: 2em 0;
+  .emphasis {
+    color: var(--primary-color);
+  }
+  &.salmon {
+    background-color: var(--accent-color-5);
+  }
+  &.red {
+    background-color: var(--primary-color);
+    color: var(--white-text-color);
+    h1, p {
+      color: var(--white-text-color);
+    }
+    .emphasis {
+      color: var(--white-text-color);
+      font-weight: bold;
+    }
+  }
+  &.extra-pad {
+    padding: 3.2em 0;
+  }
+}
+
+.shout-out {
+  p {
+    font-size: calc(11px + 1vw);
+    padding-bottom: 0.6em;
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+}
+
 .salmon-section {
-  margin-top: 2em !important;
   background-color: var(--accent-color-5);
   padding: 3em 0;
 }
