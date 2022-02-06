@@ -156,7 +156,8 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .slideup-card__content__copy {
-	margin-top: 2.5rem;
+	// margin-top: 2.5rem;
+	margin-top: 4.5rem;
   	font-weight: 500;
 	font-family: var(--serif-font-family);
   	text-shadow: 1px 1px rgba(0,0,0,0.5);
@@ -197,7 +198,7 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 
 	.slideup-card__content {
-    	transform: translateY(calc(100% - 2.5rem));
+    	transform: translateY(calc(100% - 1.5rem));
 
 		> *:not(.slideup-card__content__title) {
 			opacity: 0;
@@ -212,7 +213,8 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 		.slideup-card__content {
 			// this formula seems to be working! 
 			// bottom of card content lines up with title of next card
-			transform: translateY(calc(1rem + 0.42vw + 2.2em * -1));
+			// transform: translateY(calc(1rem + 0.42vw + 2.2em * -1)); //works but title is high
+			transform: translateY(calc(1rem + 0.42vw + 1.1em * -1));
 
 			> *:not(.slideup-card__content__title) {
 				opacity: 1;
@@ -239,7 +241,7 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 
   .slideup-card.card-pair .slideup-card__content {
     // transform: translateY(calc(100% - 4.5rem));
-    transform: translateY(calc(100% - 2.5rem));
+    transform: translateY(calc(100% - 1.5rem));
 
     >*:not(.slideup-card__content__title) {
       opacity: 0;
