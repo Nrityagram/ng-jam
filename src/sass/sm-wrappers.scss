@@ -4,7 +4,11 @@
 }
 
 .fb-container {
-  min-width: 25.25vw;
+  min-width: 25vw;
+  max-width: 25vw;
+  min-height: 87%;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .video-container {
