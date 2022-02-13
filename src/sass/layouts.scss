@@ -163,6 +163,9 @@
   padding: 0;
   gap: 0.75em;
   
+  &[data-gridgap="0"] {
+    gap: 0;
+  }
   &[data-gridgap="0.25em"] {
     gap: 0.25em;
   }
@@ -185,7 +188,7 @@
   min-width: 67%;
   max-width: 67%;
   margin: 0 auto;
-  padding-bottom: 0.5em;
+  // padding-bottom: 0.5em;
 
   &:last-of-type {
     padding-bottom: 0;
