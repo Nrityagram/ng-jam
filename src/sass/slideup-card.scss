@@ -108,6 +108,12 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
   &.blank:after {
     background-image: none;
   }
+
+  &.blank {
+	  @media (max-width: $wnd-lg) {
+	  	display: none;
+	  }
+  }
 }
 
 // not using 27/01/22
