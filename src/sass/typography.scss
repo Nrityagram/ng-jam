@@ -1,0 +1,13 @@
+p {
+    font-size: var(--desktop-body-fontsize);
+    &.emphasis {
+        color: var(--primary-color);
+    }
+    &.large {
+        font-size: calc(11px + 1vw);
+    }
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}

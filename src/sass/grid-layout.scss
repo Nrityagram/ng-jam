@@ -1,0 +1,228 @@
+$wnd-md: 800px;
+$wnd-lg: 1230px;
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.wrapper {
+    background-color: var(--body-bg-color);
+    &.salmon {
+        background-color: var(--accent-color-5);
+    }
+    &.red {
+        background-color: var(--primary-color);
+        color: #fff;
+        h1, h2, h3 {
+            color: #fff;
+        }
+    }
+
+    // Grid Types
+    display: grid;
+    &.ultra-wide {
+        grid-template-columns: 1fr 80.5vw 1fr;
+        @media (max-width: $wnd-lg) {
+            grid-template-columns: 1fr 67vw 1fr;
+        }
+    }
+    &.medium {
+        grid-template-columns: 1fr 67vw 1fr;
+    }
+    &.narrow {
+        grid-template-columns: 1fr 52vw 1fr;
+        @media (max-width: $wnd-md) {
+            grid-template-columns: 1fr 80vw 1fr;
+        }
+    }
+}
+
+.wrapper>* {
+    grid-column: 2;
+}
+
+.full-bleed {
+    width: 100%;
+    grid-column: 1 / 4;
+}
+
+.two-column-grid {
+    display: grid;
+    &.wide-narrow {
+        grid-template-columns: 2fr 1fr;
+    }
+    &.equal {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    align-items: end;
+    grid-gap: 1rem;
+    .left-edge {
+        justify-self: end;
+    }
+}
+
+.multi-column-section {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    max-width: 100%; 
+    
+    &[data-gridgap="20"] {
+        gap: 20px;
+    }
+    .w-60 {
+        width: 60%;
+    }
+    .w-40 {
+        width: 40%;
+    }
+    .w-70 {
+        width: 70%;
+    }
+    .w-30 {
+        width: 30%;
+    }
+}
+
+.multi-row-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 0;
+
+    &[data-gridgap="0"] {
+        gap: 0;
+    }
+}
+
+.quad-mosaic-grid-fixed {
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(12, 3.2vw);
+    grid-template-columns: repeat(9, 3.2vw);
+    grid-gap: 12px;
+
+    &.large-mosaic {
+        grid-template-rows: repeat(12, 3.4vw);
+        grid-template-columns: repeat(9, 3.4vw);
+        grid-gap: 16px;
+        // outline: 1px solid hotpink;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-size: var(--medium-fontsize);
+        padding: 5px;
+        min-width: 100%;
+        background-image: none;
+        transition: background-image 0.5s;
+    }
+
+    .grid-item {
+        display: flex;
+        align-items: flex-end;
+        // font-size: clamp(9px, 5vw, 1.2em);
+        border-radius: 8px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        transition: all ease-in-out 300ms;
+        overflow: hidden;
+        // position: relative;
+
+        .info {
+            color: #fff;
+            text-decoration: none;
+            font-size: var(--medium-fontsize);
+            padding: 5px;
+            min-width: 100%;
+            background-image: none;
+            transition: background-image 0.5s;
+
+            i {
+                vertical-align: middle;
+                filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+                display: inline;
+            }
+
+            .hover-label {
+                font-size: calc(8px + 0.85vw);
+                font-weight: 700;
+                filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+                display: none;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .info {
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+            }
+
+            i {
+                display: none;
+            }
+
+            .hover-label {
+                display: inline;
+            }
+        }
+
+        &.top-left {
+            grid-row: span 6;
+            grid-column: span 4;
+        }
+
+        &.top-right-gap {
+            grid-row: span 1;
+            grid-column: span 5;
+            background-color: transparent;
+        }
+
+        &.top-right {
+            grid-row: span 5;
+            grid-column: span 5;
+        }
+
+        &.bottom-left {
+            grid-row: span 6;
+            // grid-row: span 6;
+            // grid-column: span 3; o
+            grid-column: span 3;
+        }
+
+        &.bottom-right {
+            grid-row: span 6;
+            // grid-row: span 5;
+            // grid-column: span 6; o
+            grid-column: span 6;
+        }
+
+        &.bottom-left-gap {
+            grid-row: span 1;
+            grid-column: span 3;
+            background-color: transparent;
+        }
+    }
+}
+
+// PUT THIS IN CONTENT.SCSS
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    &.fit-height {
+        height: 100%;
+    }
+}
+
+.img-wrapper {
+    border-radius: 0 12px 12px 0;
+    overflow: hidden;
+}

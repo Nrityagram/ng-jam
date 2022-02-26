@@ -1,0 +1,296 @@
+---
+layout: _grid-base.njk
+heroType: "slider"
+carousels: true
+pageType: "home"
+---
+
+{% if heroImage %}
+  <div class="hero-image-container">
+    <div class="hero-image">
+      <picture>
+        <source srcset="{{ heroDesk | url }}" media="(min-width: 1025px)"/>
+        <source srcset="{{ heroTab | url }}" media="(min-width: 600px)"/>
+        <img src="{{ heroMob | url }}" alt="hero" height="auto"/>
+      </picture>
+    </div>
+    <div class="hero-text">{{ heroText }}</div>
+    <div
+    class="hero-credit"
+    data-hero-credit-desk="{{ heroDeskCredit }}"
+    data-hero-credit-tablet="{{ heroTabCredit }}"
+    data-hero-credit-mobile="{{ heroMobCredit }}"
+  ></div>
+  </div>
+{% endif %}
+{% if heroSlider %}
+  <div id="vanilla-slideshow-container">
+    <div id="vanilla-slideshow">
+      <div class="vanilla-slide">
+        <picture>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1580623152/1_w9kze2.jpg"
+          media="(min-width: 1025px)"/>
+          <source
+          srcset="https://res.cloudinary.com/nrityagram/image/upload/v1582806884/ipad/1_vbycul.jpg"
+          media="(min-width: 600px)"/>
+          <img
+          src="https://res.cloudinary.com/nrityagram/image/upload/v1582614688/mobile/1_uj92ec.jpg"
+          alt="slide 1"
+          height="auto"/>
+        </picture>
+        <div class="home-credit meta-data" data-metadata-desk="Darial Sneed" data-metadata-tablet="Darial Sneed" data-metadata-mobile="Darial Sneed"></div>
+        <div class="home_tagline home1">
+          <div class="tagline-text home1">
+          “These are among the world’s greatest dancers!”
+          </div>
+          <div class="tagline-credit home1">The New York Times</div>
+        </div>
+      </div>
+
+      <div class="vanilla-slide">
+        <picture>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1580621114/Dance-Awareness-desk_thsmc0.jpg"
+          media="(min-width: 1025px)"/>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1589045683/ipad/Dance-Awareness_q2d3sw.jpg"
+          media="(min-width: 600px)"/>
+          <img
+          src = "https://res.cloudinary.com/nrityagram/image/upload/v1580621107/mobile/Dance-Awareness-mob_c2zr5e.jpg"
+          alt="slide 2"
+          height="auto"/>
+        </picture>
+        <div class="home-credit meta-data" data-metadata-desk="Karthik Venkatraman" data-metadata-tablet="Karthik Venkatraman" data-metadata-mobile="Karthik Venkatraman"></div>
+        <div class="home_tagline home1">
+          <div class="tagline-text home1">
+          “These are among the world’s greatest dancers!”
+          </div>
+          <div class="tagline-credit home1">The New York Times</div>
+        </div>
+      </div>
+
+      <div class="vanilla-slide">
+        <picture>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1580623152/2_igyscd.jpg"
+          media="(min-width: 1025px)"/>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1582806909/ipad/2_yjjoeu.jpg"
+          media="(min-width: 600px)"/>
+          <img src="https://res.cloudinary.com/nrityagram/image/upload/v1582614688/mobile/2_xit6ye.jpg" alt="slide 3" height="auto"/>
+        </picture>
+        <div class="home-credit meta-data" data-metadata-desk="Nan Melville" data-metadata-tablet="Nan Melville" data-metadata-mobile="Nan Melville"></div>
+        <div class="home_tagline home1">
+          <div class="tagline-text home1">
+          “These are among the world’s greatest dancers!”
+          </div>
+          <div class="tagline-credit home1">The New York Times</div>
+        </div>
+      </div>
+
+      <div class="vanilla-slide">
+        <picture>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1580623153/9_uashiv.jpg"
+          media="(min-width: 1025px)"/>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1620417697/ipad/08-dhruva-ipad_ppl3ra.jpg"
+          media="(min-width: 600px)"/>
+          <img src="https://res.cloudinary.com/nrityagram/image/upload/v1620417721/mobile/08-dhruva-mobile_arlb0y.jpg" alt="slide 9" height="auto"/>
+        </picture>
+        <div
+          class="home-credit meta-data"
+          data-metadata-desk="Karthik Venkatraman"
+          data-metadata-tablet="Karthik Venkatraman"
+          data-metadata-mobile="Karthik Venkatraman"></div>
+        <div class="home_tagline home1">
+          <div class="tagline-text home1">
+          “These are among the world’s greatest dancers!”
+          </div>
+          <div class="tagline-credit home1">The New York Times</div>
+        </div>
+      </div>
+
+      <div class="vanilla-slide">
+        <picture>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1643006338/5_1school_mpstmi.jpg"
+          media="(min-width: 1025px)"/>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1643006359/ipad/5_1school_q999ms.jpg"
+          media="(min-width: 600px)"/>
+          <img
+          src = "https://res.cloudinary.com/nrityagram/image/upload/v1643006382/mobile/5_1school_i0hqhb.jpg"
+          alt="slide 5"
+          height="auto"/>
+        </picture>
+        <div
+          class="home-credit meta-data"
+          data-metadata-desk="Sushma Veerappa"
+          data-metadata-tablet="Sushma Veerappa"
+          data-metadata-mobile="Sushma Veerappa"></div>
+        <div class="home_tagline home1">
+          <div class="tagline-text home1">
+          “A selfless concentration and a depth that reflected their intensive training in dance, music, Literature, language and Philosophy.”
+          </div>
+          <div class="tagline-credit home1">The New York Times</div>
+        </div>
+      </div>
+
+      <div class="vanilla-slide">
+        <picture>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1643261439/6_school2_hbi3fg.jpg"
+          media="(min-width: 1025px)"/>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1643261464/ipad/6_school2_tobzmn.jpg"
+          media="(min-width: 600px)"/>
+          <img
+          src = "https://res.cloudinary.com/nrityagram/image/upload/v1643261522/mobile/6_school2_dmcj7e.jpg"
+          alt="slide 6"
+          height="auto"/>
+        </picture>
+        <div
+          class="home-credit meta-data"
+          data-metadata-desk="M Srinivas Murthy"
+          data-metadata-tablet="M Srinivas Murthy"
+          data-metadata-mobile="M Srinivas Murthy"></div>
+        <div class="home_tagline home1">
+          <div class="tagline-text home1">
+          “A selfless concentration and a depth that reflected their intensive training in dance, music, Literature, language and Philosophy.”
+          </div>
+          <div class="tagline-credit home1">The New York Times</div>
+        </div>
+      </div>
+
+      <div class="vanilla-slide">
+        <picture>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1569697663/poparts_banner_lii2v2.jpg"
+          media="(min-width: 1025px)"/>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1589045683/ipad/popularise-the-arts_mxn4fw.jpg"
+          media="(min-width: 600px)"/>
+          <img
+          src = "https://res.cloudinary.com/nrityagram/image/upload/v1576167204/mobile/popularise-the-arts_gopk6u.jpg"
+          alt="slide 7"
+          height="auto"/>
+        </picture>
+        <div
+          class="home-credit meta-data"
+          data-metadata-desk="Shalini Jain"
+          data-metadata-tablet="Shalini Jain"
+          data-metadata-mobile="Shalini Jain"></div>
+        <div class="home_tagline home1">
+          <div class="tagline-text home1">
+          “A selfless concentration and a depth that reflected their intensive training in dance, music, Literature, language and Philosophy.”
+          </div>
+          <div class="tagline-credit home1">The New York Times</div>
+        </div>
+      </div>
+
+      <div class="vanilla-slide">
+        <picture>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1643006854/8_1space_ljuuyn.jpg"
+          media="(min-width: 1025px)"/>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1643006887/ipad/8_1space_aztlfg.jpg"
+          media="(min-width: 600px)"/>
+          <img
+          src = "https://res.cloudinary.com/nrityagram/image/upload/v1643006909/mobile/8_1space_y4ftjh.jpg"
+          alt="slide 8"
+          height="auto"/>
+        </picture>
+        <div
+          class="home-credit meta-data"
+          data-metadata-desk="Courtesy Nrityagram"
+          data-metadata-tablet="Courtesy Nrityagram"
+          data-metadata-mobile="Courtesy Nrityagram"></div>
+        <div class="home_tagline home1">
+          <div class="tagline-text home1">
+          “How does one start when one arrives in the middle of wilderness, armed with dreams!”
+          </div>
+          <div class="tagline-credit home1">Protima Gauri</div>
+        </div>
+      </div>
+
+      <div class="vanilla-slide">
+        <picture>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1643006854/10_3space_e7wz3l.jpg"
+          media="(min-width: 1025px)"/>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1643006888/ipad/10_3space_jvqvtp.jpg"
+          media="(min-width: 600px)"/>
+          <img
+          src = "https://res.cloudinary.com/nrityagram/image/upload/v1643006909/mobile/10_3space_y7jeaz.jpg"
+          alt="slide 10"
+          height="auto"/>
+        </picture>
+        <div
+          class="home-credit meta-data"
+          data-metadata-desk="Courtesy Fall for Dance North"
+          data-metadata-tablet="Courtesy Fall for Dance North"
+          data-metadata-mobile="Courtesy Fall for Dance North"></div>
+        <div class="home_tagline home1">
+          <div class="tagline-text home1">
+          “How does one start when one arrives in the middle of wilderness, armed with dreams!”
+          </div>
+          <div class="tagline-credit home1">Protima Gauri</div>
+        </div>
+      </div>
+
+      <div class="vanilla-slide">
+        <picture>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1595320104/space_desk_pf6xpx.jpg"
+          media="(min-width: 1025px)"/>
+          <source
+          srcset = "https://res.cloudinary.com/nrityagram/image/upload/v1589047081/ipad/space_yvvwsu.jpg"
+          media="(min-width: 600px)"/>
+          <img
+          src = "https://res.cloudinary.com/nrityagram/image/upload/v1576171495/mobile/space_eyaqcj.jpg"
+          alt="slide 9"
+          height="auto"/>
+        </picture>
+        <div
+          class="home-credit meta-data"
+          data-metadata-desk="Lynne Fernandez"
+          data-metadata-tablet="Lynne Fernandez"
+          data-metadata-mobile="Lynne Fernandez"></div>
+        <div class="home_tagline home1">
+          <div class="tagline-text home1">
+          “How does one start when one arrives in the middle of wilderness, armed with dreams!”
+          </div>
+          <div class="tagline-credit home1">Protima Gauri</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- slideshow arrows -->
+    <div id="vanilla-slideshow-previous">
+      <img src="{{ '/img/left-chevron.svg' | url }}" alt="slider arrow"/>
+    </div>
+    <div id="vanilla-slideshow-next">
+      <img src="{{ '/img/right-chevron.svg' | url }}" alt="slider arrow"/>
+    </div>
+    <div id="cta-box-desk" class="home2">
+      <div class="cta-headline">{{ cta_headline }}</div>
+      <div class="red-glass-button no-dropshadow sml">Join Us</div>
+    </div>
+  </div>
+{% endif %}
+
+{{ content | safe }}
+
+{% if heroText %}
+  <script>
+    gsap.to(".hero-text", {
+      duration: 2,
+      y: 30
+    });
+  </script>
+{% endif %}

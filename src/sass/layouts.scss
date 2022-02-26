@@ -169,6 +169,9 @@
   &[data-gridgap="0.25em"] {
     gap: 0.25em;
   }
+  &[data-gridgap="0.5em"] {
+    gap: 0.5em;
+  }
   &[data-gridgap="12px"] {
     gap: 12px;
   }
@@ -321,5 +324,24 @@
     bottom: 12px;
     right: 8px;
     z-index: 2;
+  }
+}
+
+.two-column-grid {
+  display: grid;
+
+  &.wide-narrow {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  &.equal {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  align-items: end;
+  grid-gap: 1rem;
+
+  .left-edge {
+    justify-self: end;
   }
 }

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700&display=swap");
+
+// @font-face {
+//   font-family: 'serif_regular';
+//   src: url('{{ "/fonts/cormorantgaramond-regular-webfont.woff2" | url }}') format('woff2'),
+//        url('{{ "/fonts/cormorantgaramond-regular-webfont.woff" | url }}') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+html,
+body {
+  min-height: -moz-fit-content;
+  min-height: -webkit-fit-content;
+  margin: 0;
+  padding: 0;
+  font-family: "EB Garamond", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
+  font-size: var(--mobile-body-fontsize);
+  position: relative;
+  // overflow: hidden;
+}
+
+//  Enable smooth scrolling on the whole document
+// TODO: does not work on safari iOS
+// html {
+//   scroll-behavior: smooth;
+// }
+
+// protect image download by blocking mouse events
+img {
+  pointer-events: none;
+}
+
+:focus {
+  outline: none;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// Desktop + Tablet
+@media only screen and (min-width: 800px) {
+  body {
+    font-size: var(--desktop-body-fontsize);
+  }
+}
+
+@import "variables";
+@import "navbar";
+@import "navbar-desk";
+@import "vanillaSlideshow";
+@import "hero";
+// @import "hero-fixed";
+// @import "content";
+
+@import "typography";
+// Grid Layout Style
+@import "grid-layout";
+
+@import "footer";
+// Home Masthead
+@import "home";
+// @import "video-wrapper";
+@import "owl-carousel-custom";
+@import "cta";
+@import "red-glass-button";
+// @import "hover-card";
+// @import "flip-card";
+@import "slideup-card";
+// @import "shoutout-box";
+// @import "layouts";
+@import "flickity-carousels";
+@import "card";
+@import "buttons";
+@import "sm-wrappers";
