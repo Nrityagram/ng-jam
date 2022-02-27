@@ -183,9 +183,9 @@
 }
 
 .desk .multi-level .item > .item-name.lrg {
-  margin-top: -0.1em;
+  margin-top: -0.22em;
   > a {
-    font-size: 18px;
+    font-size: 21px;
   }
 }
 
@@ -207,7 +207,7 @@
     >a {
       font-size: 16px;
       color: var(--navbar-subitem-color-lite);
-      font-weight: var(--light-sserif-font-weight);
+      font-weight: var(--medium-sserif-font-weight);
     }
   }
 }
@@ -240,14 +240,14 @@
       > a {
         font-size: 16px;
         color: var(--navbar-subitem-color-lite);
-        font-weight: var(--light-sserif-font-weight);
+        font-weight: var(--medium-sserif-font-weight);
       }
     }
     li.solo {
       > a {
         font-size: 16px;
         color: var(--navbar-subitem-color-lite);
-        font-weight: var(--light-sserif-font-weight);
+        font-weight: var(--medium-sserif-font-weight);
       }
     }
   }
