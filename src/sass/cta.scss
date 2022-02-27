@@ -66,7 +66,7 @@
   padding: 1.2em 1em 0.6em;
   text-align: center;
 
-  // simple neimorphic rectangle block
+  // simple neumorphic rectangle block
   border-radius: 10px;
   @include neumorphism($distance, $blur, $intensity);
 
