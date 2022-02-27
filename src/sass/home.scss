@@ -55,7 +55,9 @@
   }
   .tagline-credit {
     display: block;
-    font-size: calc(7px + 0.8vw);
+    // font-size: calc(7px + 0.8vw);
+    // same font size as quote
+    font-size: calc(10px + 0.90vw);
     font-weight: 700;
     line-height: 1.3em;
 
@@ -71,8 +73,9 @@
   right: 3px;
   font-size: var(--image-credit-font-size-large);
   font-family: var(--sans-serif-font-family);
-  color: var(--image-credit-font-colour);
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  // color: var(--image-credit-font-colour);
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
   // padding: 0.1em 0.5em;
 }
 

@@ -37,7 +37,9 @@ $wnd-lg: 1230px;
     &[data-nopad="bottom"] {
         padding-bottom: 0;
     }
-
+    &.less-top-pad {
+        padding: 2.5em 0 3em;
+    }
     // Grid Types
     display: grid;
     &.ultra-wide {
@@ -100,8 +102,8 @@ $wnd-lg: 1230px;
     &[data-extrapad="2em"] {
         padding: 2em 0;
     }
-    &[data-extrapadtop="2em"] {
-        padding-top: 2em;
+    &[data-extrapadtop="0.5em"] {
+        padding-top: 0.5em;
     }
     .w-60 {
         width: 60%;

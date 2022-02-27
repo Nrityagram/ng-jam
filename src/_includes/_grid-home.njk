@@ -277,10 +277,12 @@ pageType: "home"
     <div id="vanilla-slideshow-next">
       <img src="{{ '/img/right-chevron.svg' | url }}" alt="slider arrow"/>
     </div>
-    <div id="cta-box-desk" class="home2">
-      <div class="cta-headline">{{ cta_headline }}</div>
-      <div class="red-glass-button no-dropshadow sml">Join Us</div>
-    </div>
+    {% if cta_headline %}
+      <div id="cta-box-desk" class="home2">
+        <div class="cta-headline">{{ cta_headline }}</div>
+        <div class="red-glass-button no-dropshadow sml">Join Us</div>
+      </div>
+    {% endif %}
   </div>
 {% endif %}
 
