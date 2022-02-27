@@ -8,7 +8,7 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 	place-items: center;
   	justify-items: stretch;
 	
-	padding: 1rem 0;
+	padding: 0.6rem 0;
 	min-width: 100%;
 	margin: 0 auto;
 
@@ -196,16 +196,22 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 	
 	@media (min-width: $wnd-md) {
 		font-size: calc(0.77em + 0.7vw);
-		line-height: calc(0.79em + 0.7vw);
+		line-height: calc(0.82em + 0.7vw);
 		margin-top: calc(5em + 0.9vw);
 		margin-bottom: calc(0.3em + 0.4vw);
+		&.lower-title {
+			margin-top: calc(3em + 4vw);
+		}
 	}
 
 	@media (min-width: $wnd-lg) {
 		font-size: clamp(18px, calc(0.52em + 0.7vw), 30px);
-		line-height: clamp(19px, calc(0.53em + 0.7vw), 31px);
+		line-height: clamp(19px, calc(0.58em + 0.7vw), 31px);
 		margin-top: calc(4em + 4vw);
 		margin-bottom: calc(0.3em + 0.4vw);
+		&.lower-title {
+			margin-top: calc(2.5em + 4vw);
+		}
 	}
 }
 

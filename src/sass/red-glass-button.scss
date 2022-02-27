@@ -54,6 +54,10 @@ $wnd-lg: 1200px;
   margin-top: 0 !important;
 }
 
+.red-glass-button.extra-space-above {
+  margin-top: 1.5em !important;
+}
+
 .red-glass-button.no-dropshadow {
   // remove shadow under the button
   box-shadow: inset 0 -0.3em 0.8em -0.3em rgba(0, 0, 0, 0),

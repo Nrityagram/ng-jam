@@ -23,7 +23,10 @@ body {
   position: relative;
   // overflow: hidden;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+}
 //  Enable smooth scrolling on the whole document
 // TODO: does not work on safari iOS
 // html {
