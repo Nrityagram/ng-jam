@@ -14,11 +14,11 @@
   --sans-serif-font-family: "Lato", sans-serif;
   --serif-font-family: "EB Garamond", serif;
   --navbar-item-color: #e0e0e0;
-  --navbar-subitem-color: #e0e0e0;
-  --navbar-subitem-color-lite: #e0e0e0;
+  --navbar-subitem-color: #cecece;
+  --navbar-subitem-color-lite: #cecece;
   --navbar--accent-color: rgb(210, 31, 38);
   --navbar-dropdown-bg-color: rgba(0, 0, 0, 0.88);
-  --navbar-dropdown-border-color: #e0e0e0;
+  --navbar-dropdown-border-color: rgba(255, 255, 255, 0.4);
   --navbar-z-index: 10;
   --ham-menu-bg-color: #000;
   --ham-menu-accent-color: #111111;
@@ -30,6 +30,7 @@
   --ham-menu-icon-color: rgb(210, 31, 38);
   --fullscreen-slideshow-z-index: 5;
   --body-bg-color: #fff;
+  --true-red: rgb(255, 0, 0);
   --primary-color: rgb(210, 31, 38);
   --accent-color-1: rgb(219, 61, 69);
   --accent-color-2: rgb(177, 36, 28);

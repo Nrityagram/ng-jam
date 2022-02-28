@@ -45,22 +45,22 @@
 
     .item {
       position: relative;
-      padding-left: 1.1em;
+      // space between top-level menu items
+      padding-left: 0.75em;
 
       a {
         text-decoration: none;
         text-transform: uppercase;
         color: var(--navbar-item-color);
-        // font-size: 16px;
         &:hover {
           text-decoration: underline;
           text-decoration-color: var(--navbar--accent-color);
-          text-underline-offset: 3px;
+          text-underline-offset: 2px;
         }
       }
 
       .item-name {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 100;
         color: var(--navbar-item-color);
         cursor: pointer;
@@ -75,7 +75,7 @@
           // keep top margin at 2px only
           // greater than 2px will make the dropdown disappear
           // when mouse moves off the item
-          margin: 7px 0 0;
+          margin: 6px 0 0;
           padding: 0;
           z-index: calc(var(--navbar-z-index) + 1);
           background-color: var(--navbar-dropdown-bg-color);
@@ -87,11 +87,12 @@
           transition: all 0.5s;
 
           li {
-            padding: 6px 12px;
+            padding: 8px 12px;
             border-top: 1px solid var(--navbar-dropdown-border-color);
 
             & > a {
               text-transform: uppercase;
+              word-spacing: 3px;
             }
 
             &:first-child {
@@ -103,16 +104,19 @@
                 & > a {
                   text-transform: uppercase;
                   font-size: 16px;
+                  color: #fff;
                 }
                 ul {
                   position: static;
                   border: none;
                   background-color: transparent;
                   li {
+                    padding: 5px 12px;
                     border: none;
                     & > a {
                       text-transform: none;
                       font-size: 16px;
+                      // sub-items (space: temple, yoga centre, etc)
                       color: var(--navbar-subitem-color);
                     }
                   }
@@ -182,35 +186,34 @@
   font-size: 16px;
 }
 
-.desk .multi-level .item > .item-name.lrg {
-  margin-top: -0.22em;
-  > a {
-    font-size: 21px;
-  }
-}
-
 .desk .multi-level#ml1 {
-  .ml1-menu-section {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border-bottom: 1px solid #888;
+  .item > .item-name {
+    // sets the distance of the top edge of dropdown menu from top-level item
+    >ul {
+      margin: 2px 0 0;
+    }
+  }
+
+  > .item > .item-name > ul > li {
+    > a {
+      color: #fff;
+    }
   }
 
   .item-name {
-  > a {
-    text-transform: uppercase;
-    font-weight: var(--strong-sserif-font-weight);
-    color: var(--primary-color);
-  }
-  .sub-item .item-name {
-    >a {
-      font-size: 16px;
-      color: var(--navbar-subitem-color-lite);
-      font-weight: var(--medium-sserif-font-weight);
+    > a {
+      text-transform: uppercase;
+      font-weight: var(--strong-sserif-font-weight);
+      color: var(--true-red);
+    }
+    .sub-item .item-name {
+      >a {
+        font-size: 16px;
+        color: #fff;
+        font-weight: var(--medium-sserif-font-weight);
+      }
     }
   }
-}
 
   justify-content: flex-end;
 
@@ -229,27 +232,46 @@
 
 .desk .multi-level#ml2 {
   padding-top: 8px;
+  .item {
+    // space between top-level menu items in ml2
+    padding-left: 1em;
+  }
   .item-name {
     > a {
       text-transform: uppercase;
-      font-weight: var(--medium-sserif-font-weight);
+      font-weight: var(--strong-sserif-font-weight);
       font-size: 19px;
+      // ml2 top-level items
       color: #fff;
     }
     .sub-item .item-name {
       > a {
         font-size: 16px;
-        color: var(--navbar-subitem-color-lite);
+        color: #fff;
         font-weight: var(--medium-sserif-font-weight);
       }
     }
     li.solo {
+      padding: 8px 12px;
       > a {
         font-size: 16px;
-        color: var(--navbar-subitem-color-lite);
+        color: #fff;
         font-weight: var(--medium-sserif-font-weight);
       }
     }
+  }
+}
+
+.desk .multi-level .item>.item-name.lrg {
+  margin-top: -0.26em;
+
+  >a {
+    font-size: 21px;
+  }
+
+  // sets the distance of the top edge of dropdown menu from top-level item
+  >ul {
+    margin: 4px 0 0 !important;
   }
 }
 
