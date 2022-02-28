@@ -1,44 +1,48 @@
 ---
-layout: _base.njk
+layout: _grid-base.njk
 heroType: "image"
 pageType: "inner"
 ---
 
 {% if heroDesk %}
-<div class="hero-image-container">
-  <div class="hero-image">
-    <picture>
-      <source srcset="{{ heroDesk | url }}" media="(min-width: 1025px)" />
-      <source srcset="{{ heroTab | url }}" media="(min-width: 600px)" />
-      <img src="{{ heroMob | url }}" alt="hero" height="auto" />
-    </picture>
-  </div>
-  <div class="hero-text">{{ heroText }}</div>
-  <div
+  <div class="hero-image-container">
+    <div class="hero-image">
+      <picture>
+        <source srcset="{{ heroDesk | url }}" media="(min-width: 1025px)"/>
+        <source srcset="{{ heroTab | url }}" media="(min-width: 600px)"/>
+        <img src="{{ heroMob | url }}" alt="hero" height="auto"/>
+      </picture>
+    </div>
+    <div class="hero-text">{{ heroText }}</div>
+    <div
     class="hero-credit"
     data-hero-credit-desk="{{ heroDeskCredit }}"
     data-hero-credit-tablet="{{ heroTabCredit }}"
     data-hero-credit-mobile="{{ heroMobCredit }}"
   ></div>
-</div>
+  </div>
 {% endif %}
 
 {{ content | safe }}
 
 {% if heroText %}
-<script>
-  gsap.to(".hero-text", { duration: 2, y: 30 });
-</script>
-{% endif %} {% if heroDesk %}
-<script>
-  // var heroImage = document.getElementsByClassName("hero-image")[0];
-  var heroCredit = document.getElementsByClassName("hero-credit")[0];
-  if (window.innerWidth > 1024) {
-    heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditDesk;
-  } else if (window.innerWidth > 599) {
-    heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditTablet;
-  } else {
-    heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditMobile;
-  }
-</script>
+  <script>
+    gsap.to(".hero-text", {
+      duration: 2,
+      y: 30
+    });
+  </script>
+{% endif %}
+{% if heroDesk %}
+  <script>
+    // var heroImage = document.getElementsByClassName("hero-image")[0];
+    var heroCredit = document.getElementsByClassName("hero-credit")[0];
+    if (window.innerWidth > 1024) {
+      heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditDesk;
+    } else if (window.innerWidth > 599) {
+      heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditTablet;
+    } else {
+      heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditMobile;
+    }
+  </script>
 {% endif %}

@@ -8,7 +8,7 @@ $wnd-lg: 1200px;
   background: #fff;
   background: linear-gradient(
     to bottom,
-    var(--primary-color) 0%,
+    var(--true-red) 0%,
     var(--accent-color-2) 100%
   );
   max-width: -moz-fit-content;
@@ -55,7 +55,11 @@ $wnd-lg: 1200px;
 }
 
 .red-glass-button.extra-space-above {
-  margin-top: 1.5em !important;
+  margin-top: 2.5em !important;
+}
+
+.red-glass-button.yt-space-above {
+  margin-top: 1.75em !important;
 }
 
 .red-glass-button.no-dropshadow {

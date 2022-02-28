@@ -1,0 +1,41 @@
+.socialmedia-sidebar {
+    display: block;
+    position: fixed;
+    top: 65%;
+    left: 1vw;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    opacity: 0.8;
+    z-index: 500;
+    li {
+        position: relative;
+        // A little gap before FB icon
+        &:nth-child(4) {
+            padding-top: 0.5rem;
+        }
+    }
+    img {
+        width: calc(27% + 0.5vw);
+        height: calc(27% + 0.5vw);
+        padding-top: 0.3rem;
+        cursor: pointer;
+    }
+}
+
+.socialmedia-sidebar li[contact-descr]:hover::after,
+.socialmedia-sidebar li[contact-descr]:focus::after {
+    font-family: 'Lato', sans-serif;
+    content: attr(contact-descr);
+    position: absolute;
+    left: 25px;
+    top: 0.2rem;
+    width: max-content;
+    border-radius: 0.2rem;
+    background-color: #757575;
+    padding: 0.3rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.6rem;
+    z-index: 6;
+}

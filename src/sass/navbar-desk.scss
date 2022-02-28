@@ -51,6 +51,7 @@
       a {
         text-decoration: none;
         text-transform: uppercase;
+        word-spacing: 3px;
         color: var(--navbar-item-color);
         &:hover {
           text-decoration: underline;
@@ -103,6 +104,7 @@
               .item-name {
                 & > a {
                   text-transform: uppercase;
+                  word-spacing: 3px;
                   font-size: 16px;
                   color: #fff;
                 }
@@ -183,7 +185,7 @@
 }
 
 .desk .multi-level .item > .item-name > a {
-  font-size: 16px;
+  font-size: 1.08em;
 }
 
 .desk .multi-level#ml1 {
@@ -197,13 +199,14 @@
   > .item > .item-name > ul > li {
     > a {
       color: #fff;
+      font-weight: var(--medium-sserif-font-weight);
     }
   }
 
   .item-name {
     > a {
       text-transform: uppercase;
-      font-weight: var(--strong-sserif-font-weight);
+      font-weight: var(--medium-sserif-font-weight);
       color: var(--true-red);
     }
     .sub-item .item-name {
@@ -239,8 +242,9 @@
   .item-name {
     > a {
       text-transform: uppercase;
-      font-weight: var(--strong-sserif-font-weight);
-      font-size: 19px;
+      font-weight: var(--medium-sserif-font-weight);
+      font-size: 20px;
+      letter-spacing: 0.03em;
       // ml2 top-level items
       color: #fff;
     }
@@ -263,7 +267,7 @@
 }
 
 .desk .multi-level .item>.item-name.lrg {
-  margin-top: -0.26em;
+  margin-top: -0.34em;
 
   >a {
     font-size: 21px;
