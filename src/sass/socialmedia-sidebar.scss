@@ -1,7 +1,7 @@
 .socialmedia-sidebar {
     display: block;
     position: fixed;
-    top: 65%;
+    top: 70%;
     left: 1vw;
     list-style: none;
     margin: 0;
@@ -10,10 +10,6 @@
     z-index: 500;
     li {
         position: relative;
-        // A little gap before FB icon
-        &:nth-child(3) {
-            padding-top: 0.5rem;
-        }
     }
     img {
         width: calc(27% + 0.5vw);

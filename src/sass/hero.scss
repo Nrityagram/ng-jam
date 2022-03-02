@@ -28,14 +28,15 @@
 
 .hero-text {
   position: absolute;
-  bottom: 20vh;
+  bottom: 30vh;
   right: 8vw;
   color: #fff;
   text-align: right;
-  font-size: calc(1.25rem + 4vw);
-  line-height: calc(1.75rem + 4vw);
+  font-size: calc(1.78rem + 4vw);
+  font-weight: var(--medium-serif-font-weight);
+  line-height: calc(1.83rem + 4vw);
   max-width: 75%;
-  text-shadow: 2px 2px 4px #4d4d4d;
+  text-shadow: 2px 2px 4px #1d1d1d;
 }
 
 .hero-credit {
@@ -74,8 +75,8 @@
   }
 
   .hero-text {
-    right: 5vw;
-    bottom: 11vh;
+    right: 4vw;
+    bottom: 19.5vh;
   }
   .hero-credit {
     right: 2px;

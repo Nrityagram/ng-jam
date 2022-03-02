@@ -40,11 +40,9 @@ $wnd-lg: 1230px;
             color: #fff;
         }
     }
-    &:first-of-type.inner-page {
-        padding: 3.25em 0;
-    }
+    
     &.inner-page {
-        padding: 0 0 3.25em;
+        padding: 3.25em 0;
     }
     &[data-nopad="top"] {
         padding-top: 0 !important;

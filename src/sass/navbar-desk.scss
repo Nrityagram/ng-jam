@@ -71,6 +71,7 @@
           position: absolute;
           top: 18px;
           width: max-content;
+          min-width: 11vw;
           height: -moz-fit-content;
           height: -webkit-fit-content;
           // keep top margin at 2px only
@@ -88,7 +89,7 @@
           transition: all 0.5s;
 
           li {
-            padding: 8px 12px;
+            padding: 9px 12px;
             border-top: 1px solid var(--navbar-dropdown-border-color);
 
             & > a {
@@ -107,19 +108,27 @@
                   word-spacing: 3px;
                   font-size: 16px;
                   color: #fff;
+                  &:hover {
+                    text-decoration: underline #fff;
+                  }
                 }
                 ul {
                   position: static;
                   border: none;
                   background-color: transparent;
                   li {
-                    padding: 5px 12px;
+                    padding: 8px 12px;
                     border: none;
                     & > a {
                       text-transform: none;
-                      font-size: 16px;
+                      // font-size: 16px;
+                      font-size: 0.72rem;
                       // sub-items (space: temple, yoga centre, etc)
                       color: var(--navbar-subitem-color);
+                      font-weight: var(--medium-sserif-font-weight);
+                      &:hover {
+                        text-decoration: underline var(--navbar-subitem-color);
+                      }
                     }
                   }
                 }
@@ -200,6 +209,9 @@
     > a {
       color: #fff;
       font-weight: var(--medium-sserif-font-weight);
+      &:hover {
+        text-decoration: underline #fff;
+      }
     }
   }
 
@@ -244,7 +256,7 @@
       text-transform: uppercase;
       font-weight: var(--medium-sserif-font-weight);
       font-size: 20px;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
       // ml2 top-level items
       color: #fff;
     }
@@ -256,11 +268,14 @@
       }
     }
     li.solo {
-      padding: 8px 12px;
+      padding: 9px 12px;
       > a {
         font-size: 16px;
         color: #fff;
         font-weight: var(--medium-sserif-font-weight);
+        &:hover {
+          text-decoration: underline #fff;
+        }
       }
     }
   }
