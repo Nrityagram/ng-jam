@@ -38,11 +38,11 @@ pageType: "inner"
     // var heroImage = document.getElementsByClassName("hero-image")[0];
     var heroCredit = document.getElementsByClassName("hero-credit")[0];
     if (window.innerWidth > 1024) {
-      heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditDesk;
+      heroCredit.innerHTML = "Photo : " + heroCredit.dataset.heroCreditDesk;
     } else if (window.innerWidth > 599) {
-      heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditTablet;
+      heroCredit.innerHTML = "Photo : " + heroCredit.dataset.heroCreditTablet;
     } else {
-      heroCredit.innerHTML = "Credit - " + heroCredit.dataset.heroCreditMobile;
+      heroCredit.innerHTML = "Photo : " + heroCredit.dataset.heroCreditMobile;
     }
   </script>
 {% endif %}

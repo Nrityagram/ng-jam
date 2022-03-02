@@ -333,9 +333,6 @@
                               <a href="/space/#odissi">Odissi Gurukul</a>
                             </li>
                             <li>
-                              <a href="/space/#odissi">Odissi Gurukul</a>
-                            </li>
-                            <li>
                               <a href="/space/#dining">Dining Hall</a>
                             </li>
                             <li>
@@ -664,11 +661,11 @@
           <img src="{{ '/img/social/email.png' | url }}" loading="lazy"/>
         </a>
       </li>
-      <li contact-descr="Events Calendar">
+      <!-- <li contact-descr="Events Calendar">
         <a href="https://calendar.google.com/calendar/embed?src=nrityagram.org_qbkn1gon81ldld7ktpk0afr3pk%40group.calendar.google.com&ctz=Asia%2FKolkata" target="_blank">
           <img src="{{ '/img/social/calendar.png' | url }}" loading="lazy"/>
         </a>
-      </li>
+      </li> -->
       <!-- <li contact-descr="Blog">
         <a href="#" target="_blank">
           <img src="{{ '/img/social/blog.png' | url }}" loading="lazy" />
@@ -760,40 +757,6 @@
       </script>
     {% endif %}
 
-    {% if fb_feed %}
-      <div id="fb-root"></div>
-      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="T4oJ3qT7"></script>
-      <script>
-        //Resize Facebook feed
-        $(window).on('resize', function () {
-          setTimeout(function () {
-            changeFBPagePlugin()
-          }, 500);
-        });
-
-        $(window).on('load', function () {
-          setTimeout(function () {
-            changeFBPagePlugin()
-          }, 1500);
-        });
-
-        changeFBPagePlugin = function () {
-          var container_width = Number($('.fb-container').width()).toFixed(0);
-          var container_height = Number($('.fb-container').height()).toFixed(0);
-          if (!isNaN(container_width) && !isNaN(container_height)) {
-            $(".fb-page")
-              .attr("data-width", container_width)
-              .attr("data-height", container_height);
-          }
-          if (typeof FB !== 'undefined') {
-            FB
-              .XFBML
-              .parse();
-          }
-        };
-      </script>
-    {% endif %}
-
     <script>
       var logoImgMob = document.getElementsByClassName("logo")[0];
       var logoImgDesk = document.getElementsByClassName("logo")[1];
@@ -814,7 +777,7 @@
         .pageType;
       // Global variables
       const navbar_bg_color_solid = "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%)";
-      var navbar_bg_color_trans = "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)";
+      var navbar_bg_color_trans = "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%)";
       const navbar_height = "100px";
       const navbar_height_onscroll = "60px";
       const navbar_desk_height = "110px";

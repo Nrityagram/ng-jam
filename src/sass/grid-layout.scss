@@ -13,6 +13,15 @@ $wnd-lg: 1230px;
     }
     h1, h2, h3 {
         margin-bottom: 0.5em;
+        &.center {
+            margin: 0 auto 0.5em;
+        }
+        &.light-font {
+            font-weight: var(--light-serif-font-weight);
+        }
+        &.medium-font {
+            font-weight: var(--medium-serif-font-weight);
+        }
     }
     p {
         margin-bottom: 0.85em;
@@ -30,6 +39,12 @@ $wnd-lg: 1230px;
         h1, h2, h3 {
             color: #fff;
         }
+    }
+    &:first-of-type.inner-page {
+        padding: 3.25em 0;
+    }
+    &.inner-page {
+        padding: 0 0 3.25em;
     }
     &[data-nopad="top"] {
         padding-top: 0 !important;
@@ -251,6 +266,23 @@ $wnd-lg: 1230px;
 }
 
 // PUT THIS IN CONTENT.SCSS
+
+// Scroll control offset: make the anchored elements sit below the navbar
+// https://css-tricks.com/hash-tag-links-padding/
+// TODO: <h*> are not sitting below the navbar
+:target::before {
+    display: block;
+    content: " ";
+    margin-top: calc(var(--navbar-desk-height) * -1);
+    height: calc(var(--navbar-desk-height));
+    // margin-top: calc(140px * -1);
+    // height: 150px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+
 img {
     max-width: 100%;
     height: auto;
@@ -263,4 +295,15 @@ img {
 .img-wrapper {
     border-radius: 0 12px 12px 0;
     overflow: hidden;
+}
+
+a {
+    &.bodylink {
+        &:link {
+            color: #000;
+        }
+        text-decoration: underline;
+        text-decoration-color: var(--light-grey-color);
+        text-underline-offset: 0.1em;
+    }
 }
