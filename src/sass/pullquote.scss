@@ -1,0 +1,23 @@
+.pullquote {
+    align-self: center;
+    // border: 1px solid cadetblue;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding-right: 1.5em;
+    color: #df0f1c;
+    letter-spacing: 0.05em;
+
+    .quote {
+        text-align: right;
+        font-size: 1.62em;
+        font-weight: var(--light-serif-font-weight);
+        font-weight: 500;
+    }
+
+    .attribution {
+        text-align: right;
+        font-size: 1.07em;
+
+    }
+}

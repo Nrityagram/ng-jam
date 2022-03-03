@@ -71,8 +71,8 @@ img {
     font-size: var(--desktop-body-fontsize);
     font-weight: 400;
     font-family: 'EB Garamond',
-    serif;
-    
+      serif;
+
   }
 }
 
@@ -87,6 +87,7 @@ img {
 @import "typography";
 // Grid Layout Style
 @import "grid-layout";
+@import "pullquote";
 
 @import "footer";
 // Home Masthead

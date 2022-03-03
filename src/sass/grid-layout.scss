@@ -93,6 +93,9 @@ $wnd-lg: 1230px;
     &.wide-narrow {
         grid-template-columns: 2fr 1fr;
     }
+    &.narrow-wide {
+        grid-template-columns: 1.25fr 1.75fr;
+    }
     &.equal {
         grid-template-columns: 1fr 1fr;
     }
@@ -280,7 +283,19 @@ $wnd-lg: 1230px;
     pointer-events: none;
 }
 
-
+.grey-text {
+    color: var(--semi-grey-color);
+    // font-size: var(--medium-fontsize);
+    a {
+        color: var(--semi-grey-color);
+        text-decoration: underline;
+        text-decoration-color: var(--light-grey-color);
+        text-underline-offset: 0.1em;
+        &:link {
+            color: var(--semi-grey-color);
+        }
+    }
+}
 
 img {
     max-width: 100%;
