@@ -6,11 +6,15 @@
     <title>{{ title }}</title>
     <link rel="preconnect" href="https://res.cloudinary.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     {% if carousels %}
       <link rel="stylesheet" href="{{ '/utils/flickity.min.css' | url }}"/>
     {% endif %}
+    {% if slider %}
+      <link rel="stylesheet" href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}"/>
+      <link rel="stylesheet" href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}"/>
+    {% endif %}
     <link rel="stylesheet" href="{{ '/css/grid-style.css' | url }}"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
   </head>
   <body>
@@ -187,7 +191,7 @@
               </label>
             </div>
             <ul>
-              <a href="/danceprof/">
+              <a href="/danceprofessional/">
                 <li>Dance Professionals</li>
               </a>
               <a href="/danceunlimited">
@@ -517,7 +521,7 @@
                       <a href="/gurukula/">Nrityagram Gurukula</a>
                     </li>
                     <li class="solo">
-                      <a href="/danceprof/">Dance Professionals</a>
+                      <a href="/danceprofessional/">Dance Professionals</a>
                     </li>
                     <li>
                       <div class="sub-item">
@@ -757,6 +761,10 @@
       </script>
     {% endif %}
 
+    {% if slider %}
+      <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script>
+    {% endif %}
+
     <script>
       var logoImgMob = document.getElementsByClassName("logo")[0];
       var logoImgDesk = document.getElementsByClassName("logo")[1];
@@ -912,6 +920,10 @@
         });
       });
     </script>
+
+    {% if slider %}
+      <script src="{{ '/utils/owl_custom.js' | url }}"></script>
+    {% endif %}
 
     {% if heroSlider %}
       <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>

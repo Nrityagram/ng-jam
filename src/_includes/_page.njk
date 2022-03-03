@@ -13,7 +13,12 @@ pageType: "inner"
         <img src="{{ heroMob | url }}" alt="hero" height="auto"/>
       </picture>
     </div>
-    <div class="hero-text">{{ heroText }}</div>
+    <div class="hero-text">
+      {{ heroText }}
+      {% if heroText2 %}
+        <br/>{{ heroText2 }}
+      {% endif %}
+    </div>
     <div
     class="hero-credit"
     data-hero-credit-desk="{{ heroDeskCredit }}"
