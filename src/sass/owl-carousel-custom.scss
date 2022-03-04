@@ -2,10 +2,15 @@
   .item {
     // filter: grayscale(0);
     opacity: 1;
-    transition: 0.75s ease all;
     margin: 0;
     transform: scale(1);
+    transition: 0.75s ease all;
     position: relative;
+
+    &.rounded {
+      border-radius: 12px;
+      overflow: hidden;
+    }
 
     .photo-credit {
       font-size: var(--image-credit-font-size);
@@ -67,10 +72,10 @@ button.owl-prev {
     .item {
       opacity: 1;
       filter: brightness(25%);
-      transition: 1.25s ease all;
       margin: 0;
       padding: 0;
       transform: scale(0.8);
+      transition: 1.25s ease all;
 
       .photo-credit {
         font-size: calc(0.3em + 0.5vw);

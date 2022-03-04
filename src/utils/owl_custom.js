@@ -5,10 +5,8 @@ $(document).ready(function () {
     nav: true,
     center: true,
     dots: false,
-    // navText: [
-    //   '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
-    //   '<i class="fa fa-chevron-right" aria-hidden="true"></i>',
-    // ],
+    smartSpeed: 500,
+    
     navText: [
       '<img src="https://res.cloudinary.com/nrityagram/image/upload/v1646318418/chevron-left-2_bta3sl.png">',
       '<img src="https://res.cloudinary.com/nrityagram/image/upload/v1646318418/chevron-right-2_dped9m.png">',
