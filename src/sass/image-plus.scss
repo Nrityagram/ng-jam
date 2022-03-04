@@ -10,7 +10,6 @@
         }
     }
 
-    // TODO: Add this in after fixing width of image bug
     border-radius: 12px;
     overflow: hidden;
     margin: 0 auto;
@@ -31,7 +30,7 @@
         position: absolute;
         writing-mode: vertical-rl;
         letter-spacing: 1px;
-        bottom: 30px;
+        bottom: 20px;
         right: 2px;
         font-size: var(--image-credit-font-size);
         font-family: var(--sans-serif-font-family);
@@ -39,24 +38,32 @@
         text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
     }
 
-    .img-title {
+    .img-title,
+    .img-subtitle {
         max-width: 75%;
         text-align: right;
         color: #fff;
-        font-size: 3em;
-        line-height: 1em;
+        font-weight: var(--medium-serif-font-weight);
         position: absolute;
         top: 40%;
-        right: 20px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        right: 35px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
     }
+    .img-title {
+        font-size: 2.35em;
+        line-height: 1em;
+    }
+     .img-subtitle {
+         margin-top: 1.2em;
+         font-size: 2.1em;
+     }
 
-    .img-subtitle {
-        color: #fff;
-        font-size: 1.75em;
-        position: absolute;
-        top: 52%;
-        right: 20px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    }
+    // .img-subtitle {
+    //     color: #fff;
+    //     font-size: 1.75em;
+    //     position: absolute;
+    //     top: 52%;
+    //     right: 20px;
+    //     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    // }
 }
