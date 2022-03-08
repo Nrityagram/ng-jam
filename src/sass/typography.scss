@@ -5,8 +5,11 @@ p {
         a {
             color: var(--primary-color) !important;
         }
-        &.bold {
+        &.emphasis--bold {
             font-weight: var(--medium-serif-font-weight);
+        }
+        &.emphasis--large-font {
+            font-size: 1.3em;
         }
     }
     &.large {
