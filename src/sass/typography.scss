@@ -2,11 +2,18 @@ p {
     font-size: var(--desktop-body-fontsize);
     &.emphasis {
         color: var(--primary-color);
+        a {
+            color: var(--primary-color) !important;
+        }
+        &.bold {
+            font-weight: var(--medium-serif-font-weight);
+        }
     }
     &.large {
         font-size: calc(11px + 1vw);
     }
 }
+
 
 h1, h2, h3 {
     color: var(--primary-color);
