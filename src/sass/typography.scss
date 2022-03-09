@@ -17,6 +17,12 @@ p {
     }
 }
 
+.red-text {
+    color: var(--primary-color);
+}
+.bold-text {
+    font-weight: var(--medium-serif-font-weight);
+}
 
 h1, h2, h3 {
     color: var(--primary-color);
