@@ -31,6 +31,9 @@ $wnd-lg: 1230px;
     }
     p {
         margin-bottom: 0.85em;
+        &.more-bottom-margin {
+            margin-bottom: 1.65em;
+        }
         &:last-of-type {
             margin-bottom: 0;
         }
@@ -93,6 +96,9 @@ $wnd-lg: 1230px;
     }
     &.less-top-pad {
         padding-top: 2.5em !important;
+    }
+    &.more-bottom-pad {
+        padding-bottom: 4em !important;
     }
     &.less-bottom-pad {
         padding-bottom: 2.5em !important;
@@ -371,6 +377,9 @@ img {
 a {
     &.bodylink {
         &:link {
+            color: #000;
+        }
+        &:visited {
             color: #000;
         }
         text-decoration: underline;
