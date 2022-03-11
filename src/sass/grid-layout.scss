@@ -31,8 +31,14 @@ $wnd-lg: 1230px;
     }
     p {
         margin-bottom: 0.85em;
+        &.center {
+            margin: 0 auto 0.85em;
+        }
         &.more-bottom-margin {
             margin-bottom: 1.65em;
+        }
+        &.less-bottom-margin {
+            margin-bottom: 0.3em;
         }
         &:last-of-type {
             margin-bottom: 0;
@@ -48,6 +54,36 @@ $wnd-lg: 1230px;
 
         &.all-caps {
             text-transform: uppercase;
+        }
+        &.center {
+            margin: 0 auto;
+        }
+        &[data-nopad="top"] {
+            padding-top: 0 !important;
+        }
+
+        &[data-nopad="bottom"] {
+            padding-bottom: 0 !important;
+        }
+
+        &.no-pad {
+            padding: 0;
+        }
+
+        &.more-top-pad {
+            padding-top: 2.2em !important;
+        }
+
+        &.less-top-pad {
+            padding-top: 0.75em !important;
+        }
+
+        &.more-bottom-pad {
+            padding-bottom: 1.25em !important;
+        }
+
+        &.less-bottom-pad {
+            padding-bottom: 0.25em !important;
         }
     }
 
@@ -102,6 +138,9 @@ $wnd-lg: 1230px;
     }
     &.less-bottom-pad {
         padding-bottom: 2.5em !important;
+    }
+    &.very-less-bottom-pad {
+        padding-bottom: 1.5em !important;
     }
     // Grid Types
     display: grid;
