@@ -89,19 +89,36 @@ $wnd-lg: 1230px;
 
     ul {
         margin-bottom: 1em;
-
-        &.no-bullets {
-            list-style: none inside;
-            // margin-left: 1em;
-        }
+        list-style: none inside;
 
         li {
             padding-bottom: 0.5em;
+
+            &::before {
+                content: "\2022\0009";
+                font-weight: var(--strong-serif-font-weight);
+                color: var(--grey-color);
+            }
 
             &:last-of-type {
                 padding-bottom: 0;
             }
         }
+
+        &.no-bullets {
+            list-style: none inside;
+            li::before {
+                content: "";
+            }
+        }
+
+        &.more-top-margin {
+            margin-top: 1em;
+        }
+        &:last-of-type {
+            margin-bottom: 0 !important;
+        }
+
     }
     background-color: var(--body-bg-color);
     &.salmon {
