@@ -22,11 +22,14 @@ $wnd-lg: 1230px;
         &.medium-font {
             font-weight: var(--medium-serif-font-weight);
         }
+        &.no-margin-bottom {
+            margin-bottom: 0 !important;
+        }
         &.less-margin-bottom {
             margin-bottom: 0.3em;
         }
-        &.more-margin-top {
-            margin-top: 0.5em;
+        &.small-margin-top {
+            margin-top: 0.4em;
         }
     }
     p {
@@ -89,16 +92,17 @@ $wnd-lg: 1230px;
 
     ul {
         margin-bottom: 1em;
-        list-style: none inside;
+        margin-left: 1em;
+        list-style: disc outside;
 
         li {
             padding-bottom: 0.5em;
 
-            &::before {
-                content: "\2022\0009";
-                font-weight: var(--strong-serif-font-weight);
-                color: var(--grey-color);
-            }
+            // &::before {
+            //     content: "\2022\0009\0009";
+            //     font-weight: var(--strong-serif-font-weight);
+            //     color: var(--semi-grey-color);
+            // }
 
             &:last-of-type {
                 padding-bottom: 0;
@@ -106,6 +110,7 @@ $wnd-lg: 1230px;
         }
 
         &.no-bullets {
+            margin-left: 0;
             list-style: none inside;
             li::before {
                 content: "";
@@ -114,6 +119,9 @@ $wnd-lg: 1230px;
 
         &.more-top-margin {
             margin-top: 1em;
+        }
+        &.more-bottom-pad {
+            padding-bottom: 0.85em;
         }
         &:last-of-type {
             margin-bottom: 0 !important;
@@ -192,6 +200,9 @@ $wnd-lg: 1230px;
     &.no-top-pad {
         padding-top: 0 !important;
     }
+    &.more-top-pad {
+        padding-top: 2em !important;
+    }
     &.more-bottom-pad {
         padding-bottom: 2em !important;
     }
@@ -204,13 +215,19 @@ $wnd-lg: 1230px;
 }
 
 .two-column-grid {
+    &.near-bleed {
+        width: 92%;
+        grid-column: 1 / 4;
+        margin: 0 auto;
+    }
+
     display: grid;
     
     &.wide-narrow {
         grid-template-columns: 2fr 1fr;
     }
     &.narrow-wide {
-        grid-template-columns: 1.25fr 1.75fr;
+        grid-template-columns: 1fr 2fr;
     }
     &.equal {
         grid-template-columns: 1fr 1fr;
