@@ -20,8 +20,16 @@ p {
 .red-text {
     color: var(--primary-color);
 }
+.black-text {
+    color: #000;
+}
 .bold-text {
     font-weight: var(--medium-serif-font-weight);
+}
+
+.strike-out {
+    color: var(--true-red);
+    text-decoration: line-through;
 }
 
 h1, h2, h3 {
