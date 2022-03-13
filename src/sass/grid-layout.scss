@@ -29,7 +29,7 @@ $wnd-lg: 1230px;
             margin-bottom: 0.3em;
         }
         &.small-margin-top {
-            margin-top: 0.4em;
+            margin-top: 0.3em;
         }
     }
     p {
@@ -141,7 +141,7 @@ $wnd-lg: 1230px;
     }
     
     &.inner-page {
-        padding: 3.25em 0;
+        padding: 3.25em 0 3.85em;
     }
     &[data-nopad="top"] {
         padding-top: 0 !important;
@@ -157,6 +157,9 @@ $wnd-lg: 1230px;
     }
     &.less-top-pad {
         padding-top: 2.5em !important;
+    }
+    &.very-less-top-pad {
+        padding-top: 1.8em !important;
     }
     &.more-bottom-pad {
         padding-bottom: 4em !important;
