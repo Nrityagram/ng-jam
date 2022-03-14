@@ -54,6 +54,18 @@ $wnd-lg: 1200px;
   margin-top: 0 !important;
 }
 
+.red-glass-button.no-space-below {
+  margin-bottom: 0 !important;
+}
+
+.red-glass-button.no-margin {
+  margin: 0 auto !important;
+}
+
+.red-glass-button.sml-top-zero-bottom-space {
+  margin: 1em auto 0 !important;
+}
+
 .red-glass-button.medium-space-above {
   margin-top: 1.5em !important;
 }
@@ -62,8 +74,8 @@ $wnd-lg: 1200px;
   margin-top: 2.5em !important;
 }
 
-.red-glass-button.yt-space-above {
-  margin-top: 1.75em !important;
+.red-glass-button.media-space-above {
+  margin: 1.5em auto 0!important;
 }
 
 .red-glass-button.no-dropshadow {

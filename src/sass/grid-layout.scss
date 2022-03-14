@@ -47,6 +47,9 @@ $wnd-lg: 1230px;
         &.more-top-margin {
             margin-top: 1.65em;
         }
+        &.less-top-margin {
+            margin-top: 1em;
+        }
         &:last-of-type {
             margin-bottom: 0;
         }
@@ -172,10 +175,10 @@ $wnd-lg: 1230px;
         padding-bottom: 4em !important;
     }
     &.less-bottom-pad {
-        padding-bottom: 2.5em !important;
+        padding-bottom: 1.5em !important;
     }
     &.very-less-bottom-pad {
-        padding-bottom: 1.5em !important;
+        padding-bottom: 1em !important;
     }
     // Grid Types
     display: grid;
@@ -255,6 +258,11 @@ $wnd-lg: 1230px;
     }
     .left-edge {
         justify-self: end;
+    }
+
+    &.no-pad {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
