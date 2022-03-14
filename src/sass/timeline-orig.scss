@@ -1,0 +1,139 @@
+// content {
+    /* position: relative; */
+    /* display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1vw auto 1vw; */
+    /* justify-items: center; */
+    // padding: 1rem 0 0;
+// }
+
+.timeline--wrapper {
+    margin: 1vh 0;
+    position: relative;
+}
+
+/* the timeline bar */
+.timeline--wrapper ul li {
+    position: absolute;
+    top: 0;
+    left: 6vw;
+    list-style-type: none;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 0;
+    background: var(--ng-timeline-darkgrey);
+    transition: 0.5s;
+}
+
+/* Box containing details */
+.timeline--wrapper ul li div {
+    position: relative;
+    border-radius: 5px;
+    /* border: 0.5px solid #ebebeb; */
+    /* width: 400px; */
+    margin-top: 8px;
+    width: 78vw;
+    /* background: #f1ede6; */
+    background: #f7f7f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    /*   outline: 2px dashed orange; */
+}
+
+.timeline--wrapper ul li div img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+.timeline--wrapper ul li div p {
+    padding: 1px 18px 5px;
+    margin: 0;
+    /* min-height: 70px; */
+    font-size: 19px;
+}
+
+/* This is supposed to draw the dot */
+.timeline--wrapper ul li div.dot {
+    content: "";
+    position: absolute;
+    top: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--ng-timeline-red);
+    box-shadow: none;
+}
+
+/* div preparing for arrow */
+.timeline--wrapper ul li div.tooltip {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    top: 11px;
+    background: transparent;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+/* Gap btw rt-side box and timeline */
+/* Only right-side boxes on mobile */
+.timeline--wrapper ul li div {
+    left: 38px;
+}
+
+
+time {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 5px 15px 3px;
+    color: var(--ng-timeline-red);
+    /* font-family: 'Lato', sans-serif; */
+}
+
+
+/* Desktop Media Query */
+@media screen and (min-width: 769px) {
+    /* {
+        position: relative;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1vw auto 1vw;
+        padding: 1rem 0 0;
+        min-height: 100%;
+        max-width: 85vw;
+    } */
+
+    /* the timeline bar */
+    .timeline--wrapper ul li {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        list-style-type: none;
+        width: 6px;
+        margin: 0 auto;
+        padding-top: 0;
+        background: var(--ng-timeline-darkgrey);
+        transition: 0.5s;
+    }
+
+    .timeline--wrapper ul li div {
+        width: 400px;
+    }
+
+    /* Gap btw rt-side box and timeline */
+    .timeline--wrapper ul li:nth-child(odd) div {
+        left: 38px;
+    }
+
+    /* Gap btw lft-side box and timeline */
+    .timeline--wrapper ul li:nth-child(even) div {
+        left: -431px;
+    }
+
+}

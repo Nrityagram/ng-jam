@@ -1,0 +1,33 @@
+---
+  layout: "_page.njk"
+  title: "Performances"
+  heroText: "Performances"
+  heroDesk: "https://res.cloudinary.com/nrityagram/image/upload/v1580617717/performances-desk_hcwn9s.jpg"
+  heroTab: "https://res.cloudinary.com/nrityagram/image/upload/v1589038701/ipad/performances_u6vfqq.jpg"
+  heroMob: "https://res.cloudinary.com/nrityagram/image/upload/v1582522489/mobile/performances_hgxjn0.jpg"
+  heroDeskCredit: "Courtesy Serendipity Arts Festival"
+  heroTabCredit: "Courtesy Serendipity Arts Festival"
+  heroMobCredit: "Courtesy Serendipity Arts Festival"
+  carousels: false
+  gismap: true
+---
+
+<div class="content">
+	<div class="wrapper ultra-wide inner-page">
+		<p class="center">Performances by the Ensemble around the world (click on markers for more details)</p>
+		<p class="more-top-margin">
+			<a href="#perfmap-overlay" class="is-mobile">
+				<img
+					src="https://res.cloudinary.com/nrityagram/image/upload/v1594912581/mobile/performancemap-esri-tap_nlgzr9.jpg"
+					alt="Performance Map"
+				/>
+			</a>
+		</p>
+		<div id="perfmap-overlay" class="overlay">
+			<div id="mobmapid"></div>
+			<a class="close" href="#">&times;</a>
+		</div>
+		<div id="deskmapid" class="is-desk"></div>
+	</div>
+</div>
+<script src="{{ '/utils/performancemap.js' | url }}" defer="defer"></script>
