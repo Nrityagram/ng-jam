@@ -41,6 +41,9 @@ $wnd-lg: 1230px;
         &.center {
             margin: 0 auto 0.85em;
         }
+        &.add-bottom-margin {
+            margin-bottom: 0.85em !important;
+        }
         &.more-bottom-margin {
             margin-bottom: 1.65em;
         }
