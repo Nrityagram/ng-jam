@@ -33,7 +33,7 @@
   color: #fff;
   text-align: right;
   font-size: calc(1.79rem + 4vw);
-  font-weight: var(--light-serif-font-weight);
+  font-weight: var(--light-serif-font-weight); 
   line-height: calc(1.85rem + 4vw);
   max-width: 75%;
   text-shadow: 2px 2px 4px #1d1d1d;
@@ -47,7 +47,8 @@
   right: 3px;
   font-size: var(--image-credit-font-size-large);
   font-family: var(--sans-serif-font-family);
-  color: #fff;
+  font-weight: var(--light-serif-font-weight);
+  color: var(--light-grey-color);
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
 }
 

@@ -23,7 +23,7 @@ footer {
   .tagline {
     font-size: 0.95em;
     letter-spacing: 0.01em;
-    font-weight: var(--medium-sserif-font-weight);
+    font-weight: var(--light-sserif-font-weight);
     color: #fff;
     width: 100%;
     background-color: var(--accent-color-1);
@@ -32,7 +32,7 @@ footer {
   .contact-info {
     font-size: 0.85em;
     letter-spacing: 1px;
-    font-weight: var(--medium-sserif-font-weight);
+    font-weight: var(--light-sserif-font-weight);
     width: 40%;
     display: flex;
     justify-content: space-around;
@@ -43,13 +43,13 @@ footer {
   .address {
     font-size: 0.65em;
     letter-spacing: 1px;
-    font-weight: var(--medium-sserif-font-weight);
+    font-weight: var(--light-sserif-font-weight);
     padding: 1.5em 0;
   }
   .terms-n-conditions {
     padding: 0 0 1.8em;
     font-size: 0.68em;
-    font-weight: var(--medium-sserif-font-weight);
+    font-weight: var(--light-sserif-font-weight);
     line-height: 0.7em;
     a {
       font-size: 1em;

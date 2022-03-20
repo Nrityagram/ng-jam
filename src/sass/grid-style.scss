@@ -19,12 +19,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: "EB Garamond", serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--body-text-color);
+  // makes the font weight look lighter -- remove to match the orig site
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
   background-color: #000;
   font-size: var(--mobile-body-fontsize);
   position: relative;
-  // overflow: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -71,10 +72,9 @@ img {
 @media only screen and (min-width: 800px) {
   body {
     font-size: var(--desktop-body-fontsize);
-    font-weight: 400;
+    font-weight: var(--light-serif-font-weight);
     font-family: 'EB Garamond',
       serif;
-
   }
 }
 

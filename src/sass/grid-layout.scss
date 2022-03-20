@@ -8,7 +8,10 @@ $wnd-lg: 1230px;
 
 .wrapper {
     // padding: 3.25em 0 5em;
-    padding: 1.625em 0 3.5em;
+    // padding: 1.625em 0 3.5em;
+
+    // bottom space  ~= 1.5 * top space
+    padding: 50px 0 75px;
     h1, h2, h3, p {
         margin-top: 0;
     }
@@ -104,13 +107,6 @@ $wnd-lg: 1230px;
 
         li {
             padding-bottom: 0.5em;
-
-            // &::before {
-            //     content: "\2022\0009\0009";
-            //     font-weight: var(--strong-serif-font-weight);
-            //     color: var(--semi-grey-color);
-            // }
-
             &:last-of-type {
                 padding-bottom: 0;
             }
@@ -133,7 +129,6 @@ $wnd-lg: 1230px;
         &:last-of-type {
             margin-bottom: 0 !important;
         }
-
     }
     background-color: var(--body-bg-color);
     &.salmon {
@@ -141,15 +136,36 @@ $wnd-lg: 1230px;
     }
     &.red {
         background-color: var(--primary-color);
-        color: #fff;
         h1, h2, h3 {
-            color: #fff;
+            color: #fff !important;
+        }
+        p {
+            color: #fff !important;
         }
     }
     
     &.inner-page {
         // padding: 3.25em 0 3.85em;
-        padding: 1.625em 0 2.75em;
+        // bottom space  ~= 1.25 * top space
+        // padding: 1.625em 0 2.25em;
+        padding: 40px 0 50px;
+
+        &.text-less-top-pad {
+            // reduce top padding of wrapper to compensate for built-in top space for <p>
+            padding-top: 32px !important;
+        }
+
+        &.title-less-top-pad {
+            // reduce top padding of wrapper to compensate for built-in top space for h1, h2 titles
+            padding-top: 27px !important;
+        }
+        &.less-bottom-pad {
+            padding-bottom: 45px !important;
+        }
+
+        &.very-less-bottom-pad {
+            padding-bottom: 40px !important;
+        }
     }
     &[data-nopad="top"] {
         padding-top: 0 !important;
@@ -171,14 +187,26 @@ $wnd-lg: 1230px;
         // padding-top: 1.8em !important;
         padding-top: 1em !important;
     }
+    &.text-less-top-pad {
+        // reduce top padding of wrapper to compensate for built-in top space for <p>
+        padding-top: 32px !important;
+    }
+    &.large-text-less-top-pad {
+        // reduce top padding of wrapper to compensate for built-in top space for <p>
+        padding-top: 40px !important;
+    }
+    &.title-less-top-pad {
+        // reduce top padding of wrapper to compensate for built-in top space for h1, h2 titles
+        padding-top: 37px !important;
+    }
     &.more-bottom-pad {
         padding-bottom: 4em !important;
     }
     &.less-bottom-pad {
-        padding-bottom: 1.5em !important;
+        padding-bottom: 45px !important;
     }
     &.very-less-bottom-pad {
-        padding-bottom: 1em !important;
+        padding-bottom: 40px !important;
     }
     // Grid Types
     display: grid;
@@ -210,8 +238,14 @@ $wnd-lg: 1230px;
     width: 100%;
     grid-column: 1 / 4;
     padding: 0.5em 0;
+    &.no-pad {
+        padding: 0 !important;
+    }
     &.no-top-pad {
         padding-top: 0 !important;
+    }
+    &.no-bottom-pad {
+        padding-bottom: 0 !important;
     }
     &.more-top-pad {
         padding-top: 2em !important;

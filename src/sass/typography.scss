@@ -1,7 +1,7 @@
 p {
     font-size: var(--desktop-body-fontsize);
     &.emphasis {
-        color: var(--primary-color);
+        color: var(--primary-color) !important;
         a {
             color: var(--primary-color) !important;
         }
@@ -13,7 +13,9 @@ p {
         }
     }
     &.large {
-        font-size: calc(11px + 1vw);
+        font-size: calc(10px + 1vw);
+        font-weight: var(--light-serif-font-weight);
+        color: var(--body-text-color-lighter);
     }
 }
 

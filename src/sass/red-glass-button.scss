@@ -17,7 +17,7 @@ $wnd-lg: 1200px;
   box-shadow: inset 0 -0.3em 0.8em -0.3em rgba(0, 0, 0, 0.1),
     inset 0 0.3em 1em -0.15em rgba(0, 0, 0, 0.6);
   font-family: var(--sans-serif-font-family);
-  font-weight: var(--medium-font-weight);
+  font-weight: var(--light-sserif-font-weight);
   font-size: calc(15px + 0.27vw);
   color: #fff;
   text-decoration: none;
@@ -76,6 +76,10 @@ $wnd-lg: 1200px;
 
 .red-glass-button.media-space-above {
   margin: 1.5em auto 0!important;
+}
+
+.red-glass-button.less-media-space-above {
+  margin: 1em auto 0 !important;
 }
 
 .red-glass-button.no-dropshadow {

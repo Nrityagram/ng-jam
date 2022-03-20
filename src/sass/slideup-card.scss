@@ -191,9 +191,9 @@ $e: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }
 
-.slideup-card__content__copy {
-  	font-weight: 500;
+.slideup-card__content__copy {	
 	font-family: var(--serif-font-family);
+	font-weight: var(--light-serif-font-weight);
   	text-shadow: 1px 1px rgba(0,0,0,0.5);
   	width: 100%;
 	
