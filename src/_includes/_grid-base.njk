@@ -24,9 +24,13 @@
     {% endif %}
 
     {% if lightgallery %}
+      <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"/> -->
       <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css"
+    />
     {% endif %}
 
     <link rel="stylesheet" href="{{ '/css/grid-style.css' | url }}"/>
@@ -389,7 +393,7 @@
                     <li>
                       <div class="sub-item">
                         <div class="item-name">
-                          <a href="#">Media</a>
+                          <a class="no-link">Media</a>
                           <ul>
                             <li>
                               <a href="/showtime">Showtime</a>
@@ -962,17 +966,22 @@
     {% endif %}
 
     {% if lightgallery %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
-    <!-- Thumbnails not compatible with captions. Need captions to show photo credits. -->
-    <!-- <script src="{{ '/utils/lightgallery-thumbnail.min.js' | url }}"></script> -->
-    <!-- Debug this: https://github.com/sachinchoolur/lg-thumbnail.js/blob/master/dist/lg-thumbnail.js -->
+    <!-- require jQuery with v1.2.21 which displays thumbnails as well as captions. v1.4 does show both. -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.21/js/lightgallery-all.min.js"></script>
     <script type="text/javascript">
-      lightGallery(document.getElementById('lightgallery'), {
-        thumbnail: true,
+      // lightGallery(document.getElementById('lightgallery'), {
+      //   thumbnail: true,
+      //   download: false,
+      //   mode: 'lg-fade',
+      //   cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+      // }); 
+      $("#lightgallery").lightGallery({
         download: false,
         mode: 'lg-fade',
-        cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-      }); 
+        preload: 4,
+        toogleThumb: true
+      });
     </script>
     {% endif %}
   </body>

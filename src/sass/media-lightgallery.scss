@@ -10,7 +10,7 @@
 #lightgallery img {
     display: inline-block;
     margin: 0.2rem;
-    width: 150px;
+    width: 24vw;
     pointer-events: all;
     border-radius: 12px;
     overflow: hidden;
@@ -30,6 +30,11 @@
     z-index: 95000;
 }
 
+.lg-outer .lg-img-wrap {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+
 .lg-toolbar {
     background-color: transparent;
 }
@@ -47,8 +52,13 @@
 
 /* Overriding lightgallery CSS to display subtitles sitting above thumbnail strip */
 .lg-sub-html {
-    bottom: 5vh;
+    bottom: 2vh;
     z-index: 95000;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: var(--light-sserif-font-weight);
+    width: 90%;
+    margin: 0 auto;
 }
 
 .lg-sub-html p {
@@ -66,6 +76,6 @@
     #lightgallery img {
         display: inline-block;
         margin: 0.6rem;
-        width: 250px;
+        width: 16vw;
     }
 }
