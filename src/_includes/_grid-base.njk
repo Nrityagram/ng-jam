@@ -21,12 +21,12 @@
       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
       crossorigin=""
 />
-      <!-- Make sure you put this AFTER Leaflet's CSS -->
-      <script
-      src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-      integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-      crossorigin=""
-    ></script>
+    {% endif %}
+
+    {% if lightgallery %}
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"/>
     {% endif %}
 
     <link rel="stylesheet" href="{{ '/css/grid-style.css' | url }}"/>
@@ -708,11 +708,8 @@
       </li>
     </ul>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
+  <!-- carousels is only for the venue logo ticker tape on homepage -->
     {% if carousels %}
-      <!-- <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script> -->
-      <!-- <script src="{{ '/utils/owl_custom.js' | url }}"></script> -->
       <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
       <script>
         var flktyWrapAroundAuto = document.getElementsByClassName("flick-carousel--wraparound-autoplay")[0];
@@ -778,7 +775,10 @@
     {% endif %}
 
     {% if slider %}
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
       <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script>
+      <script src="{{ '/utils/owl_custom.js' | url }}"></script>
     {% endif %}
 
     <script>
@@ -929,18 +929,7 @@
       function hideInfo(el) {
         el.innerHTML = "";
       }
-
-      // prevent download of images through mouse events
-      $(document).ready(function () {
-        $("img").bind("contextmenu", function (e) {
-          return false;
-        });
-      });
     </script>
-
-    {% if slider %}
-      <script src="{{ '/utils/owl_custom.js' | url }}"></script>
-    {% endif %}
 
     {% if heroSlider %}
       <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
@@ -960,6 +949,31 @@
           animationSpeed: "1.75s"
         });
       </script>
+    {% endif %}
+
+    {% if gismap %}
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <!-- Make sure you put this AFTER Leaflet's CSS -->
+      <script
+      src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+      integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+      crossorigin=""
+    ></script>
+    {% endif %}
+
+    {% if lightgallery %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <!-- Thumbnails not compatible with captions. Need captions to show photo credits. -->
+    <!-- <script src="{{ '/utils/lightgallery-thumbnail.min.js' | url }}"></script> -->
+    <!-- Debug this: https://github.com/sachinchoolur/lg-thumbnail.js/blob/master/dist/lg-thumbnail.js -->
+    <script type="text/javascript">
+      lightGallery(document.getElementById('lightgallery'), {
+        thumbnail: true,
+        download: false,
+        mode: 'lg-fade',
+        cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+      }); 
+    </script>
     {% endif %}
   </body>
 </html>

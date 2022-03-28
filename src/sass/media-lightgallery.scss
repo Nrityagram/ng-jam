@@ -1,0 +1,71 @@
+#lightgallery {
+    text-align: center;
+}
+
+#lightgallery a {
+    text-decoration: none;
+    position: relative;
+}
+
+#lightgallery img {
+    display: inline-block;
+    margin: 0.2rem;
+    width: 150px;
+    pointer-events: all;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+/* Overriding CSS for lightgallery to make the image sit above the thumbnail strip. ALso change the z-index to make the backdrop sit above the navbar */
+.lg-outer .lg-img-wrap {
+    padding: 0 5px 100px;
+}
+
+.lg-backdrop {
+    z-index: 95000;
+}
+
+.lg-outer {
+    z-index: 95000;
+}
+
+.lg-toolbar {
+    background-color: transparent;
+}
+
+/* Overriding lightgallery CSS to highlight active thumbnail or on hover, rest of the thumbnails should have darkgrey borders */
+
+.lg-outer .lg-thumb-item {
+    border: 2px solid #555555;
+}
+
+.lg-outer .lg-thumb-item.active,
+.lg-outer .lg-thumb-item:hover {
+    border-color: #fff;
+}
+
+/* Overriding lightgallery CSS to display subtitles sitting above thumbnail strip */
+.lg-sub-html {
+    bottom: 5vh;
+    z-index: 95000;
+}
+
+.lg-sub-html p {
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* Desktop Media Query */
+@media screen and (min-width: 800px) {
+    #lightgallery {
+        text-align: center;
+    }
+
+    #lightgallery img {
+        display: inline-block;
+        margin: 0.6rem;
+        width: 250px;
+    }
+}
