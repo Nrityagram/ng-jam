@@ -1,5 +1,5 @@
 {
-  "name": "11ty-sass-skeleton",
+  "name": "11ty-ngjam",
   "version": "1.2.0",
   "description": "",
   "main": "index.html",
@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/5t3ph/11ty-sass-skeleton.git"
+    "url": "git+https://github.com/achanda101/11ty-sass-multilevel-responsive-menu-skeleton.git"
   },
-  "author": "5t3ph",
-  "license": "ISC",
+  "author": "achanda101",
+  "license": "GPLv3",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@sanity/block-content-to-markdown": "^0.0.5",

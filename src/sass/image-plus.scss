@@ -1,14 +1,14 @@
 .img-plus {
     width: 100%;
     height: 100%;
-    
-    picture {
+
+    // picture {
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-    }
+    // }
 
     border-radius: 12px;
     overflow: hidden;
@@ -29,11 +29,14 @@
 
     .img-caption {
         position: absolute;
-        top: 100.5%;
+        top: 90%;
         width: 100%;
         text-align: center;
-        font-size: 0.75em;
-        line-height: 0.95em;
+        font-size: 1em;
+        font-family: var(--sans-serif-font-family);
+        font-weight: var(--light-serif-font-weight);
+        color: var(--body-text-color);
+        line-height: 1.05em;
         padding: 0;
     }
 
@@ -41,7 +44,7 @@
         position: absolute;
         writing-mode: vertical-rl;
         letter-spacing: 1px;
-        bottom: 20px;
+        bottom: 1em;
         right: 2px;
         font-size: var(--image-credit-font-size);
         font-family: var(--sans-serif-font-family);

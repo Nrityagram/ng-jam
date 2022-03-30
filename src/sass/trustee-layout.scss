@@ -1,0 +1,92 @@
+.cardwrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.cardpanel {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5vw;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    // padding: 1rem 0.1vw;
+}
+
+.desc.bio {
+    padding: 0;
+}
+
+.biopic {
+    width: 100%;
+    
+    &:hover {
+        cursor: pointer;
+    }
+    img {
+        // Safari 6.0 - 9.0 
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        pointer-events: all;
+        &:hover {
+            // -webkit-filter: grayscale(0);
+            // filter: grayscale(0);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
+}
+
+.photo-caption {
+    margin-top: 8px;
+    align-self: center;
+    text-align: center;
+    font-size: 1em;
+    font-family: var(--sans-serif-font-family);
+    font-weight: var(--light-serif-font-weight);
+    color: var(--body-text-color);
+    line-height: 1.05em;
+}
+
+.board-wrap {
+    flex-wrap: wrap;
+}
+
+.bio {
+    display: none;
+}
+
+/* Desktop Media Query */
+@media screen and (min-width: 800px) {
+    .cardwrapper {
+        // align-items: stretch;
+        gap: 0.25em;
+    }
+
+    .cardwrapper.card-pair {
+        margin: 0 20vw;
+    }
+
+    .board-wrap {
+        flex-wrap: nowrap;
+    }
+
+    .common-desc.bio {
+        padding: 0.5rem 0;
+    }
+
+    .photo-caption {
+        font-size: calc(0.2em + 0.75vw);
+        &.mobile {
+            display: none;
+        }
+    }
+}

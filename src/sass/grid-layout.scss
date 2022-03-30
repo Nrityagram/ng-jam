@@ -464,16 +464,23 @@ $wnd-lg: 1230px;
 
 // Scroll control offset: make the anchored elements sit below the navbar
 // https://css-tricks.com/hash-tag-links-padding/
-// TODO: <h*> are not sitting below the navbar
-:target::before {
-    display: block;
-    content: " ";
-    margin-top: calc(var(--navbar-desk-height) * -1);
-    height: calc(var(--navbar-desk-height));
-    // margin-top: calc(140px * -1);
-    // height: 150px;
-    visibility: hidden;
-    pointer-events: none;
+// :target::before {
+//     display: block;
+//     content: " ";
+//     margin-top: calc(var(--navbar-desk-height) * -1);
+//     height: calc(var(--navbar-desk-height));
+//     // margin-top: calc(140px * -1);
+//     // height: 150px;
+//     visibility: hidden;
+//     pointer-events: none;
+// }
+
+// TODO: check with scroll-margin-top
+.below-sticky-header {
+    scroll-margin-top: var(--navbar-desk-height);
+    @media screen and (max-width: 800px) {
+        scroll-margin-top: var(--navbar-height);
+    }
 }
 
 .grey-text {
