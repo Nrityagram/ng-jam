@@ -1,0 +1,76 @@
+/* Overriding Danamojo style with NG style */
+#danamojo-widget-container a {
+    color: var(--semi-grey-color) !important;
+}
+
+#ngoContentContainer .btn-group,
+#ngoContentContainer .btn-group-vertical {
+    display: none !important;
+}
+
+#ngoContentContainer #grid_view .widget-item-dm.col-sm-4 {
+    width: 42% !important;
+}
+
+.cost-box .cost-box-rs span {
+    color: var(--primary-color) !important;
+}
+
+#ngoContentContainer .cost_inr span {
+    color: var(--primary-color) !important;
+}
+
+#ngoContentContainer .cost_inr.inr_fade_grid_cls {
+    color: var(--primary-color) !important;
+}
+
+#ngoContentContainer p span {
+    color: var(--semi-grey-color) !important;
+}
+
+#ngoContentContainer .btn-primary {
+    background-color: var(--primary-color) !important;
+    /* border-color: var(--ng-timeline-red) !important; */
+    border: 0 !important;
+}
+
+#ngoContentContainer .nav>li>a {
+    background-color: var(--primary-color) !important;
+}
+
+#ngoContentContainer .blue_css {
+    color: var(--primary-color) !important;
+}
+
+#ngoContentContainer .quick-upi-btn {
+    display: none !important;
+    background-color: var(--primary-color) !important;
+    border: 0 !important;
+}
+
+/* #ngoContentContainer .list-group.dm-arrow-tab-group .dm-arrow-tab-box a.list-group-item.active {
+    background-color: var(--primary-color) !important;
+    border-color: var(--ng-timeline-red) !important;
+} */
+
+/* #ngoContentContainer .list-group.dm-arrow-tab-group .dm-arrow-tab-box:hover {
+    background-color: var(--primary-color) !important;
+    border-color: var(--ng-timeline-red) !important;
+} */
+
+#ngoContentContainer .nav>li.disabled>a {
+    color: #333 !important;
+}
+
+#ngoContentContainer #donorInfo label,
+#ngoContentContainer #productoverlay label {
+    color: #333 !important;
+}
+
+#inner-modal #header {
+    background-color: var(--primary-color) !important;
+}
+
+#ngoContentContainer .note-css i {
+    color: var(--primary-color) !important;
+}

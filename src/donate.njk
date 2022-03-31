@@ -1,0 +1,103 @@
+---
+  layout: "_page.njk"
+  title: "Donate"
+  heroType: "image"
+  heroText: "Donate"
+  heroDesk: "https://res.cloudinary.com/nrityagram/image/upload/v1588613881/donate_iwpz5s.jpg"
+  heroTab: "https://res.cloudinary.com/nrityagram/image/upload/v1589077339/ipad/Donate_y5gy2s.jpg"
+  heroMob: "https://res.cloudinary.com/nrityagram/image/upload/v1588613847/mobile/donate-mob_mezskh.jpg"
+  heroDeskCredit: "Guillermo Consejo"
+  heroTabCredit: "Guillermo Consejo"
+  heroMobCredit: "Guillermo Consejo"
+  carousels: false
+  donation: true
+---
+
+<div class="content">
+	<div class="wrapper medium inner-page text-less-top-pad">
+		<p>
+			Your support is vital to Nrityagram. A donation of any amount - even ₹500 ($10) - will make it possible for us to
+			strengthen our institution, so that our artists can continue creation, performance and engagement programmes, and
+			teachers can continue to offer dance outreach activities for children who are poorly served in this area.
+		</p>
+		<p>Thank you for making a Donation to Nrityagram today!</p>
+		<div class="red-glass-button light no-dropshadow sml medium-space-above open-modal">Make a Donation</div>
+		<p class="grey-text center less-top-margin less-bottom-margin">
+			We are happy to work with you on additional ideas that appeal to your funding interests and giving priorities.
+		</p>
+		<p class="grey-text center">
+			Write to us at
+			<a href="mailto:support@nrityagram.org" target="_blank">support@nrityagram.org</a>
+		</p>
+	</div>
+</div>
+
+<!-- Dialog Popup Itself -->
+<dialog id="citizen-options">
+	<div class="modal-header red-glass-button light no-dropshadow">
+		<div class="close-button" aria-label="close">&#215;</div>
+		<p>Select one</p>
+	</div>
+	<div id="passport">
+		<div class="modal-content payment-choice-list">
+			<div class="payment-choice">
+				<label for="india" class="radio">
+					<input type="radio" value="india" name="nationality" class="show-input radio-input" id="india" />
+					Citizen of India (Tax Deductible)
+				</label>
+			</div>
+			<div class="payment-choice">
+				<label for="nri" class="radio">
+					<input type="radio" value="nri" name="nationality" class="show-input radio-input" id="nri" />
+					Non-Resident Indian (Tax Deductible)
+				</label>
+			</div>
+			<div class="payment-choice">
+				<label for="usa" class="radio">
+					<input type="radio" value="usa" name="nationality" class="show-input radio-input" id="usa" />
+					Citizen of USA (Tax Deductible)
+				</label>
+			</div>
+			<div class="payment-choice">
+				<label for="othercountry" class="radio">
+					<input
+						type="radio"
+						value="othercountry"
+						name="nationality"
+						class="show-input radio-input"
+						id="othercountry"
+					/>
+					Citizen of another country
+				</label>
+			</div>
+		</div>
+	</div>
+</dialog>
+
+<script type="text/javascript">
+	const modal = document.querySelector('#citizen-options');
+	const openModal = document.querySelector('.open-modal');
+	const closeModal = document.querySelector('.close-button');
+	const body = document.querySelector('body');
+
+  const donationType = "donate";
+
+	openModal.addEventListener('click', () => {    
+		// Clear any previous selection
+		const allOptions = document.querySelectorAll('input');
+		allOptions.forEach((option) => {
+			option.checked = false;
+		});
+		modal.showModal();
+		// Disable scroll
+		body.style.overflow = 'hidden';
+	});
+
+	closeModal.addEventListener('click', () => {
+		modal.close();
+		// Enable scroll
+		body.style.overflow = 'auto';
+	});
+</script>
+
+

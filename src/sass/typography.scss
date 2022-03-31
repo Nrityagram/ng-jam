@@ -4,6 +4,7 @@ p {
         color: var(--primary-color) !important;
         a {
             color: var(--primary-color) !important;
+            text-decoration-color: var(--primary-color) !important;
         }
         &.emphasis--bold {
             font-weight: var(--medium-serif-font-weight);
@@ -16,6 +17,9 @@ p {
         font-size: calc(10px + 1vw);
         font-weight: var(--light-serif-font-weight);
         color: var(--body-text-color-lighter);
+    }
+    &.small {
+        font-size: calc(12px + 0.3vw);
     }
 }
 

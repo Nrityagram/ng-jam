@@ -1,0 +1,71 @@
+---
+  layout: "_page.njk"
+  title: "Support the Corpus Fund"
+  heroType: "image"
+  heroText: "Support the"
+  heroText2: "Corpus Fund"
+  heroDesk: "https://res.cloudinary.com/nrityagram/image/upload/v1588620637/Support-the-corpus-fund_quhmco.jpg"
+  heroTab: "https://res.cloudinary.com/nrityagram/image/upload/v1589077309/ipad/support-the-corpus-fund_nl7bjn.jpg"
+  heroMob: "https://res.cloudinary.com/nrityagram/image/upload/v1581320061/mobile/Support-the-corpus-fund_iyyuov.jpg"
+  heroDeskCredit: "Courtesy Serendipity Arts Festival"
+  heroTabCredit: "Courtesy Serendipity Arts Festival"
+  heroMobCredit: "Courtesy Serendipity Arts Festival"
+  carousels: false
+  donation: false
+---
+
+<div class="content">
+	<div class="wrapper medium inner-page text-less-top-pad">
+		<p>
+			Permanence. This one word sums up the advantage of making a donation to the Nrityagram Corpus Fund - for you as a
+			donor and for our community.
+		</p>
+		<p>
+			By supporting and strengthening our Corpus Fund you give a gift with both immediate and long-term benefits. The
+			Corpus Fund will permanently support the existence and sustenance of Nrityagram so we can continue to work as one
+			of India’s foremost Dance School and Company.
+		</p>
+		<div class="red-glass-button light no-dropshadow sml medium-space-above open-modal">Give to Our Corpus Fund</div>
+		<p class="grey-text center less-top-margin less-bottom-margin">
+			We are happy to work with you on additional ideas that appeal to your funding interests and giving priorities.
+		</p>
+		<p class="grey-text center">
+			Write to us at
+			<a href="mailto:support@nrityagram.org" target="_blank">support@nrityagram.org</a>
+		</p>
+	</div>
+</div>
+
+<!-- Dialog Popup Itself -->
+<dialog id="corpus-options">
+	<div class="modal-header red-glass-button light no-dropshadow">
+		<div class="close-button" aria-label="close">&#215;</div>
+	</div>
+
+	<div class="modal-content payment-choice-list">
+		<p>
+			Please talk to Lynne about supporting our Corpus Fund
+            <br />
+            E <a href="mailto:lynne@nrityagram.org" class="bodylink">lynne@nrityagram.org</a> | M <a href="tel:+919845073325" class="bodylink">+919845073325</a>
+		</p>
+	</div>
+</dialog>
+
+<script type="text/javascript">
+	const modal = document.querySelector('#corpus-options');
+	const openModal = document.querySelector('.open-modal');
+	const closeModal = document.querySelector('.close-button');
+	const body = document.querySelector('body');
+
+	openModal.addEventListener('click', () => {
+		modal.showModal();
+		// Disable scroll
+		body.style.overflow = 'hidden';
+	});
+
+	closeModal.addEventListener('click', () => {
+		modal.close();
+		// Enable scroll
+		body.style.overflow = 'auto';
+	});
+</script>

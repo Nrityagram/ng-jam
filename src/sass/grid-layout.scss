@@ -460,6 +460,15 @@ $wnd-lg: 1230px;
     }
 }
 
+.force-center {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    min-height: 100vh;
+}
+
 // PUT THIS IN CONTENT.SCSS
 
 // Scroll control offset: make the anchored elements sit below the navbar

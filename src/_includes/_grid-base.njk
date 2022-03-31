@@ -39,6 +39,7 @@
   <body>
     <!-- TODO Have the full menu structure as a JSON file -->
     <div style="display: none" data-page-type="{{ pageType }}" id="page-type"></div>
+    <div style="display: none" data-hero-type="{{ heroType }}" id="hero-type"></div>
     <nav>
       <div class="mobile">
         <input type="checkbox" id="menu"/>
@@ -627,7 +628,6 @@
 
     <main>
       {{ content | safe }}
-
       <footer>
         <div class="tagline">
             Nrityagram is a one-of-a-kind community of artistes, where dance is a way of life
@@ -803,6 +803,7 @@
         .getElementById("page-type")
         .dataset
         .pageType;
+      var heroType = document.getElementById("hero-type").dataset.heroType;
       // Global variables
       const navbar_bg_color_solid = "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%)";
       var navbar_bg_color_trans = "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)";
@@ -840,6 +841,11 @@
           navBarDeskElem.style.background = navbar_bg_color_trans;
           navBarMobElem.style.background = navbar_bg_color_trans;
         }
+        if (heroType == "none") {
+          navBarDeskElem.style.background = navbar_bg_color_solid;
+          navBarMobElem.style.background = navbar_bg_color_solid;
+        }
+
         // make sure mobile menu is closed
         _close_menu();
       });
@@ -861,6 +867,9 @@
           if (contentElem) {
             navBarMobElem.style.background = navbar_bg_color_solid;
           }
+          if (heroType == "none") {
+              navBarDeskElem.style.background = navbar_bg_color_solid;
+            }
         }
 
         if (fromTop < 1) {
@@ -871,6 +880,9 @@
             navBarMobElem.style.height = navbar_height;
             navBarDeskElem.style.height = navbar_desk_height;
             navBarDeskElem.style.background = navbar_bg_color_trans;
+            if (heroType == "none") {
+              navBarDeskElem.style.background = navbar_bg_color_solid;
+            }
             if (contentElem) {
               navBarMobElem.style.background = navbar_bg_color_trans;
             }
@@ -983,6 +995,65 @@
         toogleThumb: true
       });
     </script>
+    {% endif %}
+
+    {% if donation %}
+      <script type="text/javascript">
+        const opt_india = document.getElementById('india');
+        const opt_nri = document.getElementById('nri');
+        const opt_usa = document.getElementById('usa');
+        const opt_other = document.getElementById('othercountry');
+
+        if(opt_india) {
+          opt_india.addEventListener("click", () => {
+          // This is for the correct donation page to show up
+          // Using the Danamojo Donation Page - either danamojo code injection or a pdf
+          switch (donationType) {
+              case "donate":
+                location.href = "/makeadonation";
+                break;
+              default:
+                break;
+            }
+          });
+        }
+        
+        if(opt_nri) {
+          opt_nri.addEventListener("click", () => {
+          switch (donationType) {
+              case "donate":
+                location.href = "/makeadonation";
+                break;
+              default:
+                break;
+            }
+          });
+        }
+        
+        if(opt_usa) {
+          opt_usa.addEventListener("click", () => {
+            switch (donationType) {
+              case "donate":
+                location.href = "/makeadonation-usa";
+                break;
+              default:
+                break;
+            }
+          });
+        }
+        
+        if(opt_other) {
+          opt_other.addEventListener("click", () => {
+            switch (donationType) {
+              case "donate":
+                location.href = "/makeadonation-other";
+                break;
+              default:
+                break;
+            }
+          });
+        }
+      </script>
     {% endif %}
   </body>
 </html>
