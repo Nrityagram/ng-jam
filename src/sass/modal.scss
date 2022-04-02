@@ -17,7 +17,7 @@ dialog {
         padding: 0.5em 2em;
         border-radius: 12px 12px 0 0;
         position: relative;
-        .close-button {
+        .close-button, .close-subscribe-button {
             position: absolute;
             top: 3px;
             right: 20px;
@@ -27,6 +27,15 @@ dialog {
             &:hover {
                 cursor: pointer;
             }
+        }
+        &.large {
+            height: 30px;
+            margin: 0;
+        }
+        &.sib-subscribe {
+            border-radius: 12px 0 0 0;
+            height: 30px;
+            margin: 0;
         }
     }
 
@@ -40,6 +49,27 @@ dialog {
 
         input[type='radio'] {
             margin: 0 8px 0 0;
+        }
+    }
+
+    &.sib-subscribe {
+        border-radius: 14px 0 0 12px;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+            width: 8px;
+        } 
+
+        scrollbar-width: thin;
+        scrollbar-color: var(--grey-color) var(--very-light-grey-color);
+
+        &::-webkit-scrollbar-track {
+            background: var(--very-light-grey-color);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--light-grey-color);
+            border-radius: 3px;
+            border: 1px solid var(--very-light-grey-color);
         }
     }
 }
