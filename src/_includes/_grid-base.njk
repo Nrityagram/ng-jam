@@ -379,19 +379,35 @@
           <div class="menu-groups">
             <div class="multi-level" id="ml1">
               <div class="item">
-                <div class="item-name">
+                {% if parentMenuItem and parentMenuItem == "About" %}
+                <div class="item-name active">
+                  {% else %}
+                  <div class="item-name">
+                    {% endif %}
                   <a class="no-link">About</a>
                   <ul>
                     <li>
+                      {% if '/about' in page.url %}
+                      <a href="/about" class="submenu-item-active">About Us</a>
+                      {% else %}
                       <a href="/about">About Us</a>
+                      {% endif %}
                     </li>
                     <li>
+                      {% if '/history' in page.url %}
+                      <a href="/history" class="submenu-item-active">History</a>
+                      {% else %}
                       <a href="/history">History</a>
+                      {% endif %}
                     </li>
                     <li>
                       <div class="sub-item">
                         <div class="item-name">
+                          {% if '/space' in page.url %}
+                          <a href="/space" class="submenu-item-active">Space</a>
+                          {% else %}
                           <a href="/space">Space</a>
+                          {% endif %}
                           <ul>
                             <li>
                               <a href="/space/#temple">Temple</a>
@@ -421,7 +437,11 @@
                     <li>
                       <div class="sub-item">
                         <div class="item-name">
-                          <a href="/future">Future</a >
+                          {% if '/future' in page.url %}
+                          <a href="/future" class="submenu-item-active">Future</a>
+                          {% else %}
+                          <a href="/future">Future</a>
+                          {% endif %}
                           <ul>
                             <li>
                               <a href="/future/#arts-centre">Performing Arts Centre</a>
@@ -434,7 +454,11 @@
                       </div>
                     </li>
                     <li>
-                      <a href="/board">Board of Trustees</a>
+                      {% if '/board' in page.url %}
+                        <a href="/board" class="submenu-item-active">Board of Trustees</a>
+                        {% else %}
+                        <a href="/board">Board of Trustees</a>
+                        {% endif %}
                     </li>
                     <li>
                       <div class="sub-item">
@@ -442,16 +466,32 @@
                           <a class="no-link">Media</a>
                           <ul>
                             <li>
+                              {% if '/showtime' in page.url %}
+                              <a href="/showtime" class="submenu-item-active">Showtime</a>
+                              {% else %}
                               <a href="/showtime">Showtime</a>
+                              {% endif %}
                             </li>
                             <li>
+                              {% if '/behindthescenes' in page.url %}
+                              <a href="/behindthescenes" class="submenu-item-active">Behind the Scenes</a>
+                              {% else %}
                               <a href="/behindthescenes">Behind the Scenes</a>
+                              {% endif %}
                             </li>
                             <li>
+                              {% if '/lifeatng' in page.url %}
+                              <a href="/lifeatng" class="submenu-item-active">Life at Nrityagram</a>
+                              {% else %}
                               <a href="/lifeatng">Life at Nrityagram</a>
+                              {% endif %} 
                             </li>
                             <li>
+                              {% if '/downtime' in page.url %}
+                              <a href="/downtime" class="submenu-item-active">Downtime</a>
+                              {% else %}
                               <a href="/downtime">Downtime</a>
+                              {% endif %} 
                             </li>
                           </ul>
                         </div>
@@ -461,14 +501,26 @@
                 </div>
               </div>
               <div class="item">
-                <div class="item-name">
+                {% if parentMenuItem and parentMenuItem == "Visit" %}
+                <div class="item-name active">
+                  {% else %}
+                  <div class="item-name">
+                    {% endif %}
                   <a class="no-link">Visit</a>
                   <ul>
                     <li>
+                      {% if '/visit' in page.url %}
+                      <a href="/visit" class="submenu-item-active">Visit Us</a>
+                      {% else %}
                       <a href="/visit">Visit Us</a>
+                      {% endif %}
                     </li>
                     <li>
+                      {% if '/findyourway' in page.url %}
+                      <a href="/findyourway" class="submenu-item-active">Find your Way</a>
+                      {% else %}
                       <a href="/findyourway">Find your Way</a>
+                      {% endif %}
                     </li>
                     <li>
                       <a href="https://www.google.co.in/maps/@13.1615025,77.4593968,3a,60y,90t/data=!3m6!1e1!3m4!1s-9UefyZY73ob-pFS-YGTlA!2e0!7i13312!8i6656" target="_blank">Virtual Tour</a>
@@ -477,44 +529,84 @@
                 </div>
               </div>
               <div class="item">
-                <div class="item-name lrg">
+                {% if parentMenuItem and parentMenuItem == "Support" %}
+                <div class="item-name lrg active">
+                  {% else %}
+                  <div class="item-name lrg">
+                    {% endif %}
                   <a class="no-link">Support</a>
                   <ul>
                     <li>
+                      {% if '/support' in page.url %}
+                      <a href="/support" class="submenu-item-active">Support Us</a>
+                      {% else %}
                       <a href="/support">Support Us</a>
+                      {% endif %}
                     </li>
                     <li>
                       <div class="sub-item">
                         <div class="item-name">
+                          {% if '/vardan' in page.url %}
+                          <a href="/vardan" class="submenu-item-active">Join Vardān</a>
+                          {% else %}
                           <a href="/vardan">Join Vardān</a>
+                          {% endif %}
                           <ul>
                             <li>
+                              {% if '/friendsofng' in page.url %}
+                              <a href="/friendsofng" class="submenu-item-active">Friends of Nrityagram</a>
+                              {% else %}
                               <a href="/friendsofng">Friends of Nrityagram</a>
+                              {% endif %}
                             </li>
                             <li>
+                              {% if '/ngangels' in page.url %}
+                              <a href="/ngangels" class="submenu-item-active">Nrityagram Angels</a>
+                              {% else %}
                               <a href="/ngangels">Nrityagram Angels</a>
+                              {% endif %}
                             </li>
                           </ul>
                         </div>
                       </div>
                     </li>
                     <li>
+                      {% if '/donate' in page.url %}
+                      <a href="/donate" class="submenu-item-active">Donate</a>
+                      {% else %}
                       <a href="/donate">Donate</a>
+                      {% endif %}
                     </li>
                     <li>
+                      {% if '/corpusfund' in page.url %}
+                      <a href="/corpusfund" class="submenu-item-active">Support the Corpus Fund</a>
+                      {% else %}
                       <a href="/corpusfund">Support the Corpus Fund</a>
+                      {% endif %}
                     </li>
                     <li>
+                      {% if '/otherwaystogive' in page.url %}
+                      <a href="/otherwaystogive" class="submenu-item-active">Other ways to Give</a>
+                      {% else %}
                       <a href="/otherwaystogive">Other ways to Give</a>
+                      {% endif %}
                     </li>
                     <li>
+                      {% if '/sponsorship' in page.url %}
+                      <a href="/sponsorship" class="submenu-item-active">Sponsorship</a>
+                      {% else %}
                       <a href="/sponsorship">Sponsorship</a>
+                      {% endif %}                      
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="item">
-                <div class="item-name">
+                {% if parentMenuItem and parentMenuItem == "Press" %}
+                <div class="item-name active">
+                  {% else %}
+                  <div class="item-name">
+                    {% endif %}
                   <a href="/press/">Press</a>
                 </div>
               </div>
@@ -528,16 +620,28 @@
 
             <div class="multi-level" id="ml2">
               <div class="item">
-                <div class="item-name">
+                {% if parentMenuItem and parentMenuItem == "Ensemble" %}
+                <div class="item-name active">
+                  {% else %}
+                  <div class="item-name">
+                    {% endif %}
                   <a class="no-link">Ensemble</a>
                   <ul>
                     <li class="solo">
+                      {% if '/ensemble' in page.url %}
+                      <a href="/ensemble" class="submenu-item-active">Nrityagram Ensemble</a>
+                      {% else %}
                       <a href="/ensemble">Nrityagram Ensemble</a>
+                      {% endif %} 
                     </li>
                     <li>
                       <div class="sub-item">
                         <div class="item-name">
+                          {% if '/repertoire' in page.url %}
+                          <a href="/repertoire" class="submenu-item-active">Répertoire</a>
+                          {% else %}
                           <a href="/repertoire">Répertoire</a>
+                          {% endif %} 
                           <ul>
                             <li>
                               <a href="/repertoire/#sri">Śrī: In Search of the Goddess</a>
@@ -577,25 +681,45 @@
                       </div>
                     </li>
                     <li class="solo">
+                      {% if '/performancemap' in page.url %}
+                      <a href="/performancemap" class="submenu-item-active">Performances</a>
+                      {% else %}
                       <a href="/performancemap">Performances</a>
+                      {% endif %}
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="item">
-                <div class="item-name">
+                {% if parentMenuItem and parentMenuItem == "School" %}
+                <div class="item-name active">
+                  {% else %}
+                  <div class="item-name">
+                    {% endif %}
                   <a class="no-link">School</a>
                   <ul>
                     <li class="solo">
-                      <a href="/gurukula/">Nrityagram Gurukula</a>
+                      {% if '/gurukula' in page.url %}
+                      <a href="/gurukula" class="submenu-item-active">Nrityagram Gurukula</a>
+                      {% else %}
+                      <a href="/gurukula">Nrityagram Gurukula</a>
+                      {% endif %}
                     </li>
                     <li class="solo">
-                      <a href="/danceprofessional/">Dance Professionals</a>
+                      {% if '/danceprofessional' in page.url %}
+                      <a href="/danceprofessional" class="submenu-item-active">Dance Professionals</a>
+                      {% else %}
+                      <a href="/danceprofessional">Dance Professionals</a>
+                      {% endif %}
                     </li>
                     <li>
                       <div class="sub-item">
                         <div class="item-name">
-                          <a href="/danceunlimited/">Dance Unlimited</a>
+                          {% if '/danceunlimited' in page.url %}
+                          <a href="/danceunlimited" class="submenu-item-active">Dance Unlimited</a>
+                          {% else %}
+                          <a href="/danceunlimited">Dance Unlimited</a>
+                          {% endif %}
                           <ul>
                             <li>
                               <a href="/danceunlimited/#residential">Residential Workshops</a>
@@ -611,13 +735,21 @@
                 </div>
               </div>
               <div class="item">
-                <div class="item-name">
+                {% if parentMenuItem and parentMenuItem == "Community" %}
+                <div class="item-name active">
+                  {% else %}
+                  <div class="item-name">
+                    {% endif %}
                   <a class="no-link">Community</a>
                   <ul>
                     <li>
                       <div class="sub-item">
                         <div class="item-name">
-                          <a href="/community/">Nrityagram Community</a>
+                          {% if '/community' in page.url %}
+                          <a href="/community" class="submenu-item-active">Nrityagram Community</a>
+                          {% else %}
+                          <a href="/community">Nrityagram Community</a>
+                          {% endif %}
                           <ul>
                             <li>
                               <a href="/community/#villageoutreach">Village Outreach</a>
@@ -647,20 +779,40 @@
                 </div>
               </div> -->
               <div class="item">
-                <div class="item-name">
+                {% if parentMenuItem and parentMenuItem == "People" %}
+                <div class="item-name active">
+                  {% else %}
+                  <div class="item-name">
+                    {% endif %}
                   <a class="no-link">People</a>
                   <ul>
                     <li class="solo">
+                      {% if '/protima' in page.url %}
+                      <a href="/protima" class="submenu-item-active">Protima Gauri</a>
+                      {% else %}
                       <a href="/protima">Protima Gauri</a>
+                      {% endif %}
                     </li>
                     <li class="solo">
+                      {% if '/surupa' in page.url %}
+                      <a href="/surupa" class="submenu-item-active">Surupa Sen</a>
+                      {% else %}
                       <a href="/surupa">Surupa Sen</a>
+                      {% endif %}
                     </li>
                     <li class="solo">
+                      {% if '/pavithra' in page.url %}
+                      <a href="/pavithra" class="submenu-item-active">Pavithra Reddy</a>
+                      {% else %}
                       <a href="/pavithra">Pavithra Reddy</a>
+                      {% endif %}
                     </li>
                     <li class="solo">
+                      {% if '/lynne' in page.url %}
+                      <a href="/lynne" class="submenu-item-active">Lynne Fernandez</a>
+                      {% else %}
                       <a href="/lynne">Lynne Fernandez</a>
+                      {% endif %}
                     </li>
                   </ul>
                 </div>

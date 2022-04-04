@@ -10,6 +10,7 @@
   heroDeskCredit: "Karthik Venkatraman"
   heroTabCredit: "Karthik Venkatraman"
   heroMobCredit: "Karthik Venkatraman"
+  parentMenuItem: "About"
   carousels: false
 ---
 
@@ -18,7 +19,7 @@
 		<div class="cardwrapper card-pair">
 			<div class="cardpanel board-wrap">
 				<div class="card below-sticky-header" id="nirupama" onclick="bio_toggle(this); location.href='#nirupama';"">
-					
+
 					<div class="img-plus biopic">
 						<picture>
 							<source
@@ -33,12 +34,12 @@
 							/>
 						</picture>
 					</div>
-					<div class="photo-caption">AMBASSADOR NIRUPAMA RAO (RETD.)<br />Chairperson</div>
-					
+					<div class="photo-caption">AMBASSADOR NIRUPAMA RAO (RETD.)<br/>Chairperson</div>
+
 				</div>
 
 				<div class="card below-sticky-header" id="lynne" onclick="bio_toggle(this); location.href='#lynne';">
-					
+
 					<div class="img-plus biopic">
 						<picture>
 							<source
@@ -54,8 +55,8 @@
 						</picture>
 						<!-- <div class="img-credit">Photo: Dasha Larina</div> -->
 					</div>
-					<div class="photo-caption">LYNNE FERNANDEZ<br />Managing Trustee</div>
-					
+					<div class="photo-caption">LYNNE FERNANDEZ<br/>Managing Trustee</div>
+
 				</div>
 			</div>
 			<div class="common-desc bio" id="nirupama-bio">
@@ -283,22 +284,33 @@
 	function reset_all_biopics() {
 		const card_list = document.getElementsByClassName("card");
 		for (let index = 0; index < card_list.length; index++) {
-			card_list[index].getElementsByTagName('img')[0].style.filter = "grayscale(100%)";
-			card_list[index].getElementsByClassName('photo-caption')[0].style.color = "var(--body-text-color)";
+			card_list[index]
+				.getElementsByTagName('img')[0]
+				.style
+				.filter = "grayscale(100%)";
+			card_list[index]
+				.getElementsByClassName('photo-caption')[0]
+				.style
+				.color = "var(--body-text-color)";
 		}
 	}
 
 	function bio_toggle(e) {
 		reset_all_bios();
-		reset_all_biopics();	
+		reset_all_biopics();
 		const bio_elem_id = e.id + "-bio";
 		const bio_elem = document.getElementById(bio_elem_id);
 		if (bio_elem) {
 			bio_elem.style.display = "block";
 		}
-		e.getElementsByTagName('img')[0].style.filter = "grayscale(0)";
-		e.getElementsByClassName('photo-caption')[0].style.color = "var(--primary-color)";
+		e
+			.getElementsByTagName('img')[0]
+			.style
+			.filter = "grayscale(0)";
+		e
+			.getElementsByClassName('photo-caption')[0]
+			.style
+			.color = "var(--primary-color)";
 		// console.log(bio_elem_id, e.getElementsByTagName('img')[0]);
 	}
-
 </script>

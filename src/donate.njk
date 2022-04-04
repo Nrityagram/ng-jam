@@ -9,6 +9,7 @@
   heroDeskCredit: "Guillermo Consejo"
   heroTabCredit: "Guillermo Consejo"
   heroMobCredit: "Guillermo Consejo"
+  parentMenuItem: "Support"
   carousels: false
   donation: true
 ---
@@ -42,19 +43,19 @@
 		<div class="modal-content payment-choice-list">
 			<div class="payment-choice">
 				<label for="india" class="radio">
-					<input type="radio" value="india" name="nationality" class="show-input radio-input" id="india" />
+					<input type="radio" value="india" name="nationality" class="show-input radio-input" id="india"/>
 					Citizen of India (Tax Deductible)
 				</label>
 			</div>
 			<div class="payment-choice">
 				<label for="nri" class="radio">
-					<input type="radio" value="nri" name="nationality" class="show-input radio-input" id="nri" />
+					<input type="radio" value="nri" name="nationality" class="show-input radio-input" id="nri"/>
 					Non-Resident Indian (Tax Deductible)
 				</label>
 			</div>
 			<div class="payment-choice">
 				<label for="usa" class="radio">
-					<input type="radio" value="usa" name="nationality" class="show-input radio-input" id="usa" />
+					<input type="radio" value="usa" name="nationality" class="show-input radio-input" id="usa"/>
 					Citizen of USA (Tax Deductible)
 				</label>
 			</div>
@@ -80,9 +81,9 @@
 	const closeModal = document.querySelector('.close-button');
 	const body = document.querySelector('body');
 
-  const donationType = "donate";
+	const donationType = "donate";
 
-	openModal.addEventListener('click', () => {    
+	openModal.addEventListener('click', () => {
 		// Clear any previous selection
 		const allOptions = document.querySelectorAll('input');
 		allOptions.forEach((option) => {
@@ -99,5 +100,3 @@
 		body.style.overflow = 'auto';
 	});
 </script>
-
-

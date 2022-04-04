@@ -297,3 +297,21 @@
 .no-link {
   cursor: default;
 }
+
+.desk .multi-level .item>.item-name.active>a {
+    text-underline-offset: 3px;
+    text-decoration: 2px underline red;
+}
+
+.desk .multi-level a.submenu-item-active {
+  &::before {
+    content: "";
+    margin-right: 5px;
+    border-left: 2px solid #df0f1c;
+  }
+  &::after {
+    content: "";
+    margin-left: 5px;
+    border-right: 2px solid #df0f1c;
+  }
+}
