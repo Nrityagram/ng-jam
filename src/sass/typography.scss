@@ -25,6 +25,9 @@ p {
 
 .red-text {
     color: var(--primary-color);
+    a {
+        text-decoration-color: var(--primary-color) !important;
+    }
 }
 .black-text {
     color: #000;

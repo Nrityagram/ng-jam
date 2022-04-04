@@ -12,7 +12,7 @@ $wnd-lg: 1230px;
 
     // bottom space  ~= 1.5 * top space
     padding: 50px 0 75px;
-    h1, h2, h3, p {
+    h1, h2, h3, p, table {
         margin-top: 0;
     }
     h1, h2, h3 {
@@ -36,7 +36,7 @@ $wnd-lg: 1230px;
             margin-top: 0.3em !important;
         }
     }
-    p {
+    p, table {
         margin-bottom: 0.85em;
         &.center {
             margin: 0 auto 0.85em;

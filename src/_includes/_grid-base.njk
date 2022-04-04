@@ -977,21 +977,21 @@
     </dialog>
 
     <script type="text/javascript">
-      const modal = document.querySelector('#sib-subscribe-form');
+      const sib_modal = document.querySelector('#sib-subscribe-form');
       // const openModal = document.querySelector('.open-subscribe-modal');
-      const closeModal = document.querySelector('.close-subscribe-button');
-      const body = document.querySelector('body');
+      const sib_closeModal = document.querySelector('.close-subscribe-button');
+      const sib_body = document.querySelector('body');
 
       function openSibForm() {
-        modal.showModal();
+        sib_modal.showModal();
         // Disable scroll
-        body.style.overflow = 'hidden';
+        sib_body.style.overflow = 'hidden';
       }
 
-      closeModal.addEventListener('click', () => {
-        modal.close();
+      sib_closeModal.addEventListener('click', () => {
+        sib_modal.close();
         // Enable scroll
-        body.style.overflow = 'auto';
+        sib_body.style.overflow = 'auto';
       });
     </script>
 
