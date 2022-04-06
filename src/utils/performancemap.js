@@ -560,7 +560,7 @@ $(document).ready(function () {
   })
     .addTo(deskmap)
     .bindPopup(
-      "<city>New York, NY, USA</city><production>Ensemble NY Debut</production><location>Kaye Playhouse, Hunter College<date>18 JUN 1996</date></location><production>NDE 1 & 2 Traditional Repertoire (Re-staged)</production><location>Waldorf Astoria<date>15 AUG 1997</date></location><location>Downtown Dance Festival, Battery Park<date>27 AUG 1997</date></location><location>Symphony Space<date>4 OCT 1997</date></location><production>Traditional Repertoire (Re-staged)</production><location>Kaye Playhouse, Hunter College<date>8 JAN 1999</date></location><location>Queens Theatre in the Park<date>16-17 JAN 1999</date></location><production>Śrī: In Search of the Goddess</production><location>Symphony Space<date>20-21 APR 2002</date></location><production>Śrī (Odissi)</production><location>Central Park SummerStage<date>9 JUL 2003</date></location><production>Ansh</production><location>Joyce Theater<date>12-17 APR 2005</date></location><production>Sacred Space</production><location>NYU Skirball Center for the Performing Arts<date>12-13 MAY 2006</date></location><production>Pratimā: Reflection</production><location>Joyce Theater<date>19-24 FEB 2008</date><emph>Premiere</emph></location><production>Saṃhāra</production><location>Joyce Theater<date>20-25 MAR 2012</date></location><location>Queens Theatre in the Park<date>29-30 SEP 2018</date></location><production>Saṃyoga</production><location>NYU Skirball Center for the Performing Arts<date>6-7 APR 2013</date></location><location>Temple of Dendur, MET Museum<date>11 JAN 2015</date></location><production>Vibhakta</production><location>Fall for Dance at City Centre<date>27-28 SEP 2013</date></location><production>Songs of Love and Longing</production><location>Baryshnikov Arts Center<date>1-2 MAY 2014</date></location><production>Shivashtakam</production><location>Fall for Dance at City Center<date>8-9 OCT 2015</date></location><production>Śriyaḥ</production><location>Lincoln Center's White Light Festival<date>2 & 4 OCT 2016</date></location><production>Saṃhāra Revisited</production><location>The Temple of Dendur, MET Museum<date>27-28 OCT 2018</date></location>",
+      "<city>New York, NY, USA</city><production>Ensemble NY Debut</production><location>Kaye Playhouse, Hunter College<date>18 JUN 1996</date></location><production>NDE 1 & 2 Traditional Repertoire (Re-staged)</production><location>Waldorf Astoria<date>15 AUG 1997</date></location><location>Downtown Dance Festival, Battery Park<date>27 AUG 1997</date></location><location>Symphony Space<date>4 OCT 1997</date></location><production>Traditional Repertoire (Re-staged)</production><location>Kaye Playhouse, Hunter College<date>8 JAN 1999</date></location><location>Queens Theatre in the Park<date>16-17 JAN 1999</date></location><production>Śrī: In Search of the Goddess</production><location>Symphony Space<date>20-21 APR 2002</date></location><production>Śrī (Odissi)</production><location>Central Park SummerStage<date>9 JUL 2003</date></location><production>Ansh</production><location>Joyce Theater<date>12-17 APR 2005</date></location><production>Sacred Space</production><location>NYU Skirball Center for the Performing Arts<date>12-13 MAY 2006</date></location><production>Pratimā: Reflection</production><location>Joyce Theater<date>19-24 FEB 2008</date><emph>Premiere</emph></location><production>Saṃhāra</production><location>Joyce Theater<date>20-25 MAR 2012</date></location><location>Queens Theatre in the Park<date>29-30 SEP 2018</date></location><production>Saṃyoga</production><location>NYU Skirball Center for the Performing Arts<date>6-7 APR 2013</date></location><location>Temple of Dendur, MET Museum<date>11 JAN 2015</date></location><production>Vibhakta</production><location>Fall for Dance at City Centre<date>27-28 SEP 2013</date></location><production>Songs of Love and Longing</production><location>Baryshnikov Arts Center<date>1-2 MAY 2014</date></location><production>Shivashtakam</production><location>Fall for Dance at City Center<date>8-9 OCT 2015</date></location><production>Śriyaḥ</production><location>Lincoln Center's White Light Festival<date>2 & 4 OCT 2016</date></location><production>Saṃhāra Revisited</production><location>The Temple of Dendur, MET Museum<date>27-28 OCT 2018</date></location><production>APAP Showcase</production><location>Online<date>7 JAN 2021</date></location><location>Online<date>11 JAN 2022</date></location><production>Vinati</production><location>World Music Institute (Online)<date>23 MAY 2021</date></location>",
       { maxHeight: 200, maxWidth: 300 }
     ); // New York
   L.marker([51.046362, -114.05803], {
@@ -1100,7 +1100,7 @@ $(document).ready(function () {
   })
     .addTo(deskmap)
     .bindPopup(
-      "<city>Becket MA, USA</city><production>Sacred Space</production><location>Jacob’s Pillow Dance Festival<date>19-23 JUL 2006</date></location>",
+      "<city>Becket MA, USA</city><production>Sacred Space</production><location>Jacob’s Pillow Dance Festival<date>19-23 JUL 2006</date></location><production>Upadāna</production><location>Jacob’s Pillow Dance Festival (Online)<date>12 JUN 2021</date></location>",
       { maxHeight: 200, maxWidth: 300 }
     ); // Becket MA, USA
   L.marker([39.190665, -106.819201], {
@@ -1460,7 +1460,7 @@ $(document).ready(function () {
   })
     .addTo(deskmap)
     .bindPopup(
-      "<city>Toronto ON, Canada</city><production>Vibhakta</production><location>Fall for Dance North, Sony Centre<date>29 SEP 2015</date></location>",
+      "<city>Toronto ON, Canada</city><production>Vibhakta</production><location>Fall for Dance North, Sony Centre<date>29 SEP 2015</date></location><production>Lalita Lavanga</production><location>Fall for Dance North (Online)<date>13 OCT 2021</date></location>",
       { maxHeight: 200, maxWidth: 300 }
     ); // Toronto ON, Canada
   L.marker([41.308252, -72.924161], {
@@ -1704,7 +1704,17 @@ $(document).ready(function () {
     .bindPopup(
       "<city>Dubai, UAE</city><production>Traditional Repertoire (Re-staged)</production><location><date>20 SEP 1995</date></location>",
       { maxHeight: 200, maxWidth: 300 }
-    ); // Dubai, UAE
+  ); // Dubai, UAE
+  L.marker([24.5239, 54.4346], {
+    icon: redIcon,
+    title: "Abu Dhabi, UAE",
+    riseOnHover: true,
+  })
+    .addTo(deskmap)
+    .bindPopup(
+      "<city>Abu Dhabi, UAE</city><production>Āhuti</production><location>NYU at Abu Dhabi (Online)<date>17 FEB 2021</date></location>",
+      { maxHeight: 200, maxWidth: 300 }
+    ); // Abu Dhabi, UAE
   L.marker([35.680071, 139.768522], {
     icon: redIcon,
     title: "Tokyo, Japan",
@@ -3053,7 +3063,7 @@ $(document).ready(function () {
   })
     .addTo(mobmap)
     .bindPopup(
-      "<city>Becket MA, USA</city><production>Sacred Space</production><location>Jacob’s Pillow Dance Festival<date>19-23 JUL 2006</date></location>",
+      "<city>Becket MA, USA</city><production>Sacred Space</production><location>Jacob’s Pillow Dance Festival<date>19-23 JUL 2006</date></location><production>Upadāna</production><location>Jacob’s Pillow Dance Festival (Online)<date>12 JUN 2021</date></location>",
       { maxHeight: 200, maxWidth: 300 }
     ); // Becket MA, USA
   L.marker([39.190665, -106.819201], {
@@ -3413,7 +3423,7 @@ $(document).ready(function () {
   })
     .addTo(mobmap)
     .bindPopup(
-      "<city>Toronto ON, Canada</city><production>Vibhakta</production><location>Fall for Dance North, Sony Centre<date>29 SEP 2015</date></location>",
+      "<city>Toronto ON, Canada</city><production>Vibhakta</production><location>Fall for Dance North, Sony Centre<date>29 SEP 2015</date></location><production>Lalita Lavanga</production><location>Fall for Dance North (Online)<date>13 OCT 2021</date></location>",
       { maxHeight: 200, maxWidth: 300 }
     ); // Toronto ON, Canada
   L.marker([41.308252, -72.924161], {
@@ -3658,6 +3668,16 @@ $(document).ready(function () {
       "<city>Dubai, UAE</city><production>Traditional Repertoire (Re-staged)</production><location><date>20 SEP 1995</date></location>",
       { maxHeight: 200, maxWidth: 300 }
     ); // Dubai, UAE
+  L.marker([24.5239, 54.4346], {
+    icon: redIcon,
+    title: "Abu Dhabi, UAE",
+    riseOnHover: true,
+  })
+    .addTo(mobmap)
+    .bindPopup(
+      "<city>Abu Dhabi, UAE</city><production>Āhuti</production><location>NYU at Abu Dhabi (Online)<date>17 FEB 2021</date></location>",
+      { maxHeight: 200, maxWidth: 300 }
+    ); // Abu Dhabi, UAE
   L.marker([35.680071, 139.768522], {
     icon: redIcon,
     title: "Tokyo, Japan",
